@@ -3,6 +3,25 @@
 
 (function($) {
 
+  // abuse optional language identifier of code blocks to contain additional attributes - delimiter: /
+  $(function () {
+
+      $(document.body).find('code').each(function() {
+
+          var $this = $(this);
+          var parts = $this.attr('class').split("/");
+
+          for (var i=0; i<parts.length; i++) {
+              $this.addClass(parts[i]);
+              $this.attr(parts[i], "");
+          }
+      });
+    });
+})(window.jqlite);
+
+
+(function($) {
+
     var startSnip = "<!--START-->";
     var stopSnip = "<!--STOP-->";
 
@@ -63,13 +82,5 @@
         insertHtml();
     });
 
-
-    // more convenient attributes for the code tag
-    $(function () {
-
-        $("code[fragment]").addClass("fragment");
-        $("code[small]").addClass("small");
-        $("code[cmd]").addClass("cmd");
-    });
 
 })(window.jqlite);
