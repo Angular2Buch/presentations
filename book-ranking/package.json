@@ -1,0 +1,12 @@
+{
+  "name": "Praesentation",
+  "description": "Einfuehrung in Angular2",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "http-server -o"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.8.0"
+  }
+}
