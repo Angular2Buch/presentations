@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 	<head>
 		<meta charset="utf-8">
@@ -15,10 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
+
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!--<link rel="stylesheet" href="lib/font/font-awesome/css/font-awesome.min.css" />-->
+		<!--<link rel="stylesheet" href="lib/font/ionicons/css/ionicons.min.css" />-->
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--<link href="lib/css/github.css" rel="stylesheet" />-->
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -416,6 +420,8 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+                //minScale: 0.2,
+                //maxScale: 1.0,
 				controls: true,
 				progress: true,
 				history: true,
@@ -428,9 +434,10 @@
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/showSource/showSource.js' }
 				]
 			});
 
