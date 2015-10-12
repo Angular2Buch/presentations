@@ -324,6 +324,13 @@ img {
 .reveal ul {
   list-style-type: none; }
 
+.reveal.overview .slides section {
+  background: rgba(0, 0, 0, 0.1); }
+
+.reveal.overview .slides section:hover,
+.reveal.overview .slides section.present {
+  background: rgba(0, 0, 0, 0.3); }
+
 /* a lot of other css that we will use later on */
 .nowrap {
   white-space: nowrap; }

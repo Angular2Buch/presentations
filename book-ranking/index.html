@@ -23,7 +23,6 @@
         <!--<link rel="stylesheet" href="lib/font/ionicons/css/ionicons.min.css" />-->
 
         <!-- Code syntax highlighting -->
-        <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
         <link href="lib/css/github.css" rel="stylesheet" />
 
         <!-- Printing and PDF exports -->
@@ -412,12 +411,15 @@
 
             </div>
 
-            <span style="color: #555; align:bottom; position: absolute;bottom: 5px; left: 5px; font-size: 0.7em">
-                @JohannesHoppe, @d_koppenhagen, @fmalcher01, @GregOnNet
-            </span>
-
         </div>
 
+        <div class="pesentation-details">
+            <p>
+                @JohannesHoppe, @d_koppenhagen, @fmalcher01, @GregOnNet
+                <span >| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+            </p>
+        </div>        
+        
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
@@ -449,6 +451,16 @@
             });
 
         </script>
+        
+        <!-- Printing and PDF exports -->
+        <script>
+            // ... and print it!
+            if (window.location.search.match(/print-pdf/gi)) {
+                document.addEventListener("DOMContentLoaded", function() {
+                    window.print();
+                });
+            }
+        </script>        
 
     </body>
 </html>

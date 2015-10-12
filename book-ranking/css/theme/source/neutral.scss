@@ -96,4 +96,16 @@ img
     list-style-type: none;
 }
 
+.reveal.overview {
+
+    .slides section {
+    	background: rgba(0,0,0,0.1);
+    }
+
+    .slides section:hover,
+    .slides section.present {
+    	background: rgba(0,0,0,0.3);
+    }
+}
+
 @import "custom";
