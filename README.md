@@ -6,12 +6,10 @@
 # Dev Setup
 
 1. Install Node.js
-
 2. Run
 ```
 npm install -g grunt-cli
 npm install
 grunt serve
 ```
-
 3. Do your html/css changes. Browser will reload automatically.

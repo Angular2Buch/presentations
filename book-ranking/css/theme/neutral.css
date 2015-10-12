@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * A theme for reveal.js by johannes (copy of white.scss)
  */
@@ -60,7 +59,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #537078;
-  font-family: "OpenSansRegular", sans-serif;
+  font-family: "OpenSansBold", sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -329,7 +328,6 @@ img {
 .nowrap {
   white-space: nowrap; }
 
-/* 'Created' by area */
 .pesentation-details {
   position: absolute;
   left: 10px;
@@ -520,19 +518,3 @@ code.cmd {
 
 .fa-5x {
   font-size: 5em !important; }
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  font-size: 0;
-  height: 0;
-  visibility: hidden; }
-
-/* IE-Patch f�r IE 7*/
-*:first-child + html .clearfix {
-  min-height: 0; }
-
-/* IE-Patch f�r IE 6*/
-* html .clearfix {
-  height: 1%; }
