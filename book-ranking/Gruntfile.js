@@ -3,6 +3,9 @@ module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	var base = grunt.option('base') || '.';
 
+	// changed by johannes:
+	base = base + "/..";
+
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),

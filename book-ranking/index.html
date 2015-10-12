@@ -93,26 +93,14 @@
 
                     <section data-markdown>
                         ## Klassen
-                        ```typescript/contenteditable
-                         class Vehicle {
-                             constructor(name) {
-                                 this.name = name;
-                                 this.speed = 0;
-                             }
+                        ```typescript|contenteditable|data-show-source=../book-ranking-code/class.ts
 
-                             velocity(speed){
-                                 this.speed += speed;
-                             }
-                         }
-
-                         let porsche = new Car('Porsche');
-                         porsche.velocity(120);
                         ```
                     </section>
 
                     <section data-markdown>
                         ## Module
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // vehicles.js
                         export class Vehicle {
                          constructor(name) {
@@ -125,7 +113,7 @@
                         }
                         export class Car extends Vehicle { ... }
                         ```
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // main.js
                         import { Vehicle, Car } from 'vehicles'
 
@@ -146,7 +134,7 @@
 
                     <section data-markdown>
                         ## Unsere erste Komponente
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/RedditApp.ts
                         import {Component, View} from 'angular2/angular2'
                         @Component({
@@ -165,7 +153,7 @@
 
                     <section data-markdown>
                         ## Laden der App
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // app.ts
                         import { bootstrap } from 'angular2/angular2';
                         import BookRankingApp from 'imports/BookRankingApp';
@@ -201,7 +189,7 @@
 
                     <section data-markdown>
                         ## Die Bücher-Klasse
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/Book.ts
                         export default class Book {
                           title : string;
@@ -217,7 +205,7 @@
 
                     <section data-markdown>
                         ## Eine neue Bücher-Komponente
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/RankingBook.ts
                         import { Component, View } from 'angular2/angular2';
                         import Book from 'imports/Book';
@@ -231,7 +219,7 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/RankingBook.ts
                         ...
                         @View({
@@ -253,7 +241,7 @@
 
                     <section data-markdown>
                         ## Anpassen unserer BookRankingApp
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/BookRankingApp.ts
                         import { Component, View, NgFor } from 'angular2/angular2';
                         import Book from 'imports/Book';
@@ -263,7 +251,7 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/BookRankingApp.ts
                         ...
                         @View({
@@ -288,7 +276,7 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/BookRankingApp.ts
                         ...
                         export default class BookRankingApp {
@@ -316,7 +304,7 @@
                 <section>
                     <section data-markdown>
                         ## Nun noch die Vote-Funktion
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/Article.ts
                         export default class Article {
                           ...
@@ -333,7 +321,7 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/RankingBook.ts
                         import { Component, View, EventEmitter } from 'angular2/angular2';
                         ...
@@ -357,7 +345,7 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/RankingBook.ts
                         ...
                         export default class RankingBook {
@@ -384,7 +372,7 @@
 
                 <section data-markdown>
                         ## Und nun noch sortieren
-                        ```typescript/contenteditable
+                        ```typescript|contenteditable
                         // imports/BookRankingApp.ts
                         ...
                         @View({
@@ -418,11 +406,11 @@
                 @JohannesHoppe, @d_koppenhagen, @fmalcher01, @GregOnNet
                 <span >| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
             </p>
-        </div>        
-        
+        </div>
+
 
         <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
+        <script src="js/reveal.min.js"></script>
 
         <script>
 
@@ -436,7 +424,7 @@
                 history: true,
                 center: true,
 
-                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
 
                 // Optional reveal.js plugins
                 dependencies: [
@@ -446,12 +434,16 @@
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'plugin/zoom-js/zoom.js', async: true },
                     { src: 'plugin/notes/notes.js', async: true },
+                    // own:
+                    { src: 'plugin/showSource/jqlite.min.js' },
+                    { src: 'plugin/showSource/http.min.js' },
+                    { src: 'plugin/showSource/enhanceCodeBlocks.js' },
                     { src: 'plugin/showSource/showSource.js' }
                 ]
             });
 
         </script>
-        
+
         <!-- Printing and PDF exports -->
         <script>
             // ... and print it!
@@ -460,7 +452,7 @@
                     window.print();
                 });
             }
-        </script>        
+        </script>
 
     </body>
 </html>
