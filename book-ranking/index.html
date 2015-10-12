@@ -100,25 +100,11 @@
 
                     <section data-markdown>
                         ## Module
-                        ```typescript|contenteditable
-                        // vehicles.js
-                        export class Vehicle {
-                         constructor(name) {
-                             this.name = name;
-                             this.speed = 0;
-                         }
-                         velocity(speed){
-                             this.speed += speed;
-                         }
-                        }
-                        export class Car extends Vehicle { ... }
-                        ```
-                        ```typescript|contenteditable
-                        // main.js
-                        import { Vehicle, Car } from 'vehicles'
+                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/vehicles.ts
 
-                        let porsche = new Car('Porsche');
-                        let kettler = new Vehicle('Tricycle');
+                        ```
+                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/main.ts
+
                         ```
                     </section>
 
