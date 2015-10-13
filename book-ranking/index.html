@@ -70,10 +70,10 @@
 
                 <section data-markdown>
                     <script type="text/template">
-                    <i class="fa fa-exclamation-triangle" style="font-size:6em;"></i>
-                    
-                    Alle gezeigten Beispiele basieren auf Alpha-Versionen von Angular 2.0.
-                    Vieles davon kann sich noch ändern.
+                      <i class="fa fa-exclamation-triangle" style="font-size:6em;"></i>
+
+                      Alle gezeigten Beispiele basieren auf Alpha-Versionen von Angular 2.0.
+                      Vieles davon kann sich noch ändern.
                     </script>
                 </section>
 
@@ -95,18 +95,27 @@
                     </section>
 
                     <section data-markdown>
+                        ## Setup
+
+                        ```cmd|cmd
+                        $ npm install -g typescript
+                        $ tsc --watch
+                        ```
+                    </section>
+
+                    <section data-markdown>
                         ## Klassen
-                        ```typescript|contenteditable|data-show-source=../book-ranking-code/class.ts
+                        ```typescript|contenteditable|data-show-source=../book-ranking-code/grundlagen/class.ts
 
                         ```
                     </section>
 
                     <section data-markdown>
                         ## Module
-                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/vehicles.ts
+                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/grundlagen/vehicles.ts
 
                         ```
-                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/main.ts
+                        ```typescript|contenteditable|small|data-show-source=../book-ranking-code/grundlagen/main.ts
 
                         ```
                     </section>
@@ -118,7 +127,21 @@
                 <section>
 
                     <section data-markdown>
-                        ## Und los geht's
+                        ![](img/angular2-logo.svg)
+                        ## Hallo NG2
+                    </section>
+
+                    <section data-markdown>
+                        ### index.html
+                        <br/>
+                        ``` html
+                        &lt;head&gt;...&lt;/head&gt;
+                        &lt;body&gt;
+                            ...
+                            &lt;book-ranking&gt;&lt;/book-ranking&gt;
+                            ...
+                        &lt;/body&gt;
+                        ```
                     </section>
 
                     <section data-markdown>
@@ -148,15 +171,6 @@
                         import BookRankingApp from 'imports/BookRankingApp';
 
                         bootstrap(BookRankingApp);
-                        ```
-                        ``` html
-                        &lt;!-- index.html --&gt;
-                        &lt;head&gt;...&lt;/head&gt;
-                        &lt;body&gt;
-                            ...
-                            &lt;book-ranking&gt;&lt;/book-ranking&gt;
-                            ...
-                        &lt;/body&gt;
                         ```
                     </section>
 

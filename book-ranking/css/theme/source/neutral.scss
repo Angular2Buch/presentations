@@ -41,7 +41,7 @@
 $backgroundColor: white;
 
 $mainColor: #2a2b2c;
-$headingColor: #537078;
+$headingColor: darken( #B52E31, 5% ); // ##B52E31 angular svg logo red
 
 $mainFontSize: 38px;
 $mainFont: 'OpenSansRegular', sans-serif;
@@ -50,7 +50,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: #0b72b5;
+$linkColor: #0273D4; // angular baby-blue
 $linkColorHover: darken( $linkColor, 20% );
 $selectionBackgroundColor: #26351C;
 
