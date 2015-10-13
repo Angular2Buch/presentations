@@ -1,5 +1,6 @@
 .DS_Store
 Thumbs.db
 
+ignore.*
 node_modules/
 npm-debug.log
