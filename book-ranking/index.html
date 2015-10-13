@@ -98,7 +98,8 @@
                         ## Setup
 
                         ```cmd|cmd
-                        $ npm install -g typescript
+                        $ npm install -g typescript tsd
+                        $ tsd install angular2/ es6-shim
                         $ tsc --watch
                         ```
                     </section>
@@ -106,17 +107,17 @@
                     <section data-markdown>
                         ## Klassen
                         ```typescript|contenteditable|data-show-source=../book-ranking-code/grundlagen/class.ts
-
+                        loading...
                         ```
                     </section>
 
                     <section data-markdown>
                         ## Module
                         ```typescript|contenteditable|small|data-show-source=../book-ranking-code/grundlagen/vehicles.ts
-
+                        loading...
                         ```
                         ```typescript|contenteditable|small|data-show-source=../book-ranking-code/grundlagen/main.ts
-
+                        loading...
                         ```
                     </section>
 
@@ -132,35 +133,37 @@
                     </section>
 
                     <section data-markdown>
-                        ### index.html
-                        <br/>
-                        ``` html
-                        &lt;head&gt;...&lt;/head&gt;
-                        &lt;body&gt;
-                            ...
-                            &lt;book-ranking&gt;&lt;/book-ranking&gt;
-                            ...
-                        &lt;/body&gt;
-                        ```
+                        <script type="text/template">
+                            ### index.html
+
+                            ```html
+                            <html>
+                                <head>
+                                    <script src="https://jspm.io/system@0.18.js"></script>
+                                    <script src="https://code.angularjs.org/2.0.0-alpha.40/angular2.dev.js"></script>
+                                </head>
+                                <body>
+
+                                    <book-ranking></book-ranking>
+
+                                </body>
+                            </html>
+                            ```
+
+                            <small>[Demo](../book-ranking-code/app/index.html)</small>
+                        </script>
                     </section>
 
                     <section data-markdown>
-                        ## Unsere erste Komponente
-                        ```typescript|contenteditable
-                        // imports/RedditApp.ts
-                        import {Component, View} from 'angular2/angular2'
-                        @Component({
-                          selector: 'book-ranking'
-                        })
-                        @View({
-                          template: `&lt;h1&gt;Books:&lt;/h1&gt;&lt;p&gt;{{books}}&lt;/p&gt;`
-                        })
-                        class BookRankingApp {
-                          constructor() {
-                            this.books = ['bookA','bookB'];
-                          }
-                        }
-                        ```
+                        <script type="text/template">
+                            ## book-ranking.ts
+                            #### Komponente mit Dekoratoren
+                            <br/>
+
+                            ```typescript|contenteditable|data-show-source=../book-ranking-code/app/book-ranking.ts
+                            loading...
+                            ```
+                        </script>
                     </section>
 
                     <section data-markdown>
@@ -227,13 +230,13 @@
                         ...
                         @View({
                           template: `
-                            &lt;book&gt;
-                              &lt;div class="main"&gt;
-                                &lt;h2&gt;
-                                  &lt;a href="{{ book.link }}"&gt;{{ book.title }}&lt;/a&gt;
-                                &lt;/h2&gt;
-                              &lt;/div&gt;
-                            &lt;/book&gt;
+                            &lt;book>
+                              &lt;div class="main">
+                                &lt;h2>
+                                  &lt;a href="{{ book.link }}">{{ book.title }}&lt;/a>
+                                &lt;/h2>
+                              &lt;/div>
+                            &lt;/book>
                           `
                         })
                         export default class RankingBook {
@@ -260,18 +263,18 @@
                         @View({
                           directives: [RankingBook, NgFor],
                           template: `
-                             &lt;section class="new-link"&gt;
-                               &lt;div class="control-group"&gt;
-                                 &lt;div&gt;&lt;label for="title"&gt;Title:&lt;/label&gt;&lt;/div&gt;
-                                 &lt;div&gt;&lt;input name="title" #newtitle&gt;&lt;/div&gt;
-                               &lt;/div&gt;
-                               &lt;div class="control-group"&gt;
-                                 &lt;div&gt;&lt;label for="link"&gt;Link:&lt;/label&gt;&lt;/div&gt;
-                                 &lt;div&gt;&lt;input name="link" #newlink/&gt;&lt;/div&gt;
-                               &lt;/div&gt;
-                               &lt;button (click)="addBook(newtitle, newlink)"&gt;Submit&lt;/button&gt;
-                             &lt;/section&gt;
-                             &lt;book *ng-for="#book of books" [book]="book"&gt;&lt;/book&gt;
+                             &lt;section class="new-link">
+                               &lt;div class="control-group">
+                                 &lt;div>&lt;label for="title">Title:&lt;/label>&lt;/div>
+                                 &lt;div>&lt;input name="title" #newtitle>&lt;/div>
+                               &lt;/div>
+                               &lt;div class="control-group">
+                                 &lt;div>&lt;label for="link">Link:&lt;/label>&lt;/div>
+                                 &lt;div>&lt;input name="link" #newlink/>&lt;/div>
+                               &lt;/div>
+                               &lt;button (click)="addBook(newtitle, newlink)">Submit&lt;/button>
+                             &lt;/section>
+                             &lt;book *ng-for="#book of books" [book]="book">&lt;/book>
                            `
                         })
                         ...
@@ -333,16 +336,16 @@
                           events: ['voted']
                         })
                         @View({ template: `
-                            &lt;book&gt;
-                              &lt;div class="votes"&gt;{{ book.votes }}&lt;/div&gt;
-                              &lt;div class="main"&gt;
+                            &lt;book>
+                              &lt;div class="votes">{{ book.votes }}&lt;/div>
+                              &lt;div class="main">
                                 ...
-                                &lt;ul&gt;
-                                  &lt;li&gt;&lt;a href (click)="voteUp()"&gt;upvote&lt;/a&gt;&lt;/li&gt;
-                                  &lt;li&gt;&lt;a href (click)="voteDown()"&gt;downvote&lt;/a&gt;&lt;/li&gt;
-                                &lt;/ul&gt;
-                              &lt;/div&gt;
-                            &lt;/book&gt;`
+                                &lt;ul>
+                                  &lt;li>&lt;a href (click)="voteUp()">upvote&lt;/a>&lt;/li>
+                                  &lt;li>&lt;a href (click)="voteDown()">downvote&lt;/a>&lt;/li>
+                                &lt;/ul>
+                              &lt;/div>
+                            &lt;/book>`
                         })
                         ```
                     </section>
@@ -382,7 +385,7 @@
                            directives: [RankingBook, NgFor],
                            template: `
                              ...
-                             &lt;book (voted)="sortList(article)"&gt;&lt;/book&gt;
+                             &lt;book (voted)="sortList(article)">&lt;/book>
                            `
                         })
                         export default class BookRankingApp {
