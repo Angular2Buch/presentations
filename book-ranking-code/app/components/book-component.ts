@@ -1,5 +1,5 @@
 import { Component, View } from 'angular2/angular2';
-import Book from './book';
+import Book from '../models/book';
 
 @Component({
   selector: 'book',
@@ -14,6 +14,6 @@ import Book from './book';
     </div>
   `
 })
-export default class RankingBook {
+export default class BookComponent {
   book: Book;
 }

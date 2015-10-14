@@ -1,12 +1,12 @@
 import {Component, View, NgFor} from 'angular2/angular2';
 import Book from '../models/book';
-import RankedBook from './ranked-book';
+import BookComponent from './book-component';
 
 @Component({
   selector: 'book-ranking'
 })
 @View({
-  directives: [RankedBook, NgFor],
+  directives: [BookComponent, NgFor],
   template: `
      <section class="new-link">
        <div class="control-group">
