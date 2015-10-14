@@ -1,17 +1,18 @@
-import { Component, View } from 'angular2/angular2';
+import { Component, View, EventEmitter } from 'angular2/angular2';
 import Book from '../models/book';
 
 @Component({
   selector: 'book',
-  properties: ['book'],
+  inputs: ['book'],
+  outputs: ['rated']
 })
 @View({
   template: `
     <div class="main">
       <h2>
         <a href="{{ book.link }}">{{ book.title }} {{ book.rating }}</a>
-        <button (click)="voteUp()">Vote up</button>
-        <button (click)="voteDown()">Vote down</button>
+        <button (click)="rateUp()">Rate up</button>
+        <button (click)="rateDown()">Rate down</button>
         <hr />
       </h2>
     </div>
@@ -19,12 +20,15 @@ import Book from '../models/book';
 })
 export default class BookComponent {
   book: Book;
+  rated: EventEmitter = new EventEmitter();;
 
-  voteUp() {
+  rateUp() {
     this.book.rating++;
+    this.rated.next(this.book);
   }
 
-  voteDown() {
+  rateDown() {
     this.book.rating--;
+    this.rated.next(this.book);
   }
 }

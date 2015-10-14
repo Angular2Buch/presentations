@@ -19,7 +19,7 @@ import BookComponent from './book-component';
        </div>
        <button (click)="add(title, link)">Submit</button>
      </section>
-     <book *ng-for="#book of books" [book]="book"></book>
+     <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
 })
 export default class BookRanking {
@@ -38,5 +38,9 @@ export default class BookRanking {
 
     title.value = '';
     link.value = '';
+  }
+
+  reorderBooks(book: Book) {
+    this.books.sort((a, b) => b.rating - a.rating);
   }
 }
