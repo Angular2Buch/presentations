@@ -11,6 +11,10 @@
       $(document.body).find('code').each(function() {
 
           var $this = $(this);
+
+          if($this.attr('class') === null)
+           return;
+
           var elements = $this.attr('class').split("|");
 
           for (var i=0; i<elements.length; i++) {
