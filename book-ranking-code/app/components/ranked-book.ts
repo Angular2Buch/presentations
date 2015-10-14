@@ -7,13 +7,11 @@ import Book from './book';
 })
 @View({
   template: `
-    <book>
-      <div class="main">
-        <h2>
-          <a href="{{ book.link }}">{{ book.title }}</a>
-        </h2>
-      </div>
-    </book>
+    <div class="main">
+      <h2>
+        <a href="{{ book.link }}">{{ book.title }}</a>
+      </h2>
+    </div>
   `
 })
 export default class RankingBook {
