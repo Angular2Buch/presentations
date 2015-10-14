@@ -2,8 +2,7 @@ import { Component, View } from 'angular2/angular2';
 import Book from '../models/book';
 
 @Component({
-  selector: 'book',
-  properties: ['book']
+  selector: 'book', properties: ['book']
 })
 @View({
   template: `
