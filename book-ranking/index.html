@@ -198,27 +198,6 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript|contenteditable
-                        // imports/RankingBook.ts
-                        ...
-                        @View({
-                          template: `
-                            &lt;book>
-                              &lt;div class="main">
-                                &lt;h2>
-                                  &lt;a href="{{ book.link }}">{{ book.title }}&lt;/a>
-                                &lt;/h2>
-                              &lt;/div>
-                            &lt;/book>
-                          `
-                        })
-                        export default class RankingBook {
-                          book: Book;
-                        }
-                        ```
-                    </section>
-
-                    <section data-markdown>
                         ## Anpassen unserer BookRankingApp
                         ```typescript|contenteditable
                         // imports/BookRankingApp.ts
