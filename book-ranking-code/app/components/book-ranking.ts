@@ -8,17 +8,19 @@ import BookComponent from './book-component';
 @View({
   directives: [BookComponent, NgFor],
   template: `
-     <section class="new-link">
-       <div class="control-group">
+     <form class="form">
+       <div class="form-group">
          <div><label for="title">Title</label></div>
-         <div><input name="title" #title></div>
+         <div><input class="form-control" name="title" #title></div>
        </div>
-       <div class="control-group">
+       <div class="form-group">
          <div><label for="link">Comment</label></div>
-         <div><textarea name="comment" #comment></textarea></div>
+         <div><textarea class="form-control" name="comment" #comment></textarea></div>
        </div>
-       <button (click)="add(title, comment)">Submit</button>
-     </section>
+       <div class="form-group">
+        <button (click)="add(title, comment)" class="btn btn-primary">Submit</button>
+       </div>
+     </form>
      <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
 })

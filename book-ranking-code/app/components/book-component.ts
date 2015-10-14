@@ -8,12 +8,15 @@ import Book from '../models/book';
 })
 @View({
   template: `
-    <div class="main">
-      <h2>{{ book.title }}</h2>
+    <div class="well">
+      <div class="thumbnail pull-right">
+        <img src="http://www.gravatar.com/avatar/{{ book.rating }}?s=80&default=wavatar&forcedefault=1"/>
+      </div>
+      <h2>{{ book.title }} <small>Stars {{ book.rating }}</small></h2>
       <p>{{ book.comment }}</p>
-      <small>Stars {{ book.rating }}</small>
-      <button (click)="rateUp()">Rate up</button>
-      <button (click)="rateDown()">Rate down</button>
+
+      <button (click)="rateUp()" class="btn btn-default glyphicon glyphicon-thumbs-up"></button>
+      <button (click)="rateDown()" class="btn btn-default glyphicon glyphicon-thumbs-down"></button>
     </div>
   `
 })
