@@ -27,8 +27,8 @@ export default class BookRanking {
 
   constructor() {
     this.books = [
-      new Book('ExampleBook', 'http://mybook.org'),
-      new Book('AnotherExample', 'http://yourbook.com')
+      new Book('Angular 2', 'Eine praktische Einführung'),
+      new Book('Die Kunst des klugen Handelns', '52 Irrwege die Sie besser anderen überlassen.')
     ];
   }
 
