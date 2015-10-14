@@ -8,7 +8,7 @@ import BookComponent from './book-component';
 @View({
   directives: [BookComponent, NgFor],
   template: `
-     <form class="form">
+     <div class="form">
        <div class="form-group">
          <div><label for="title">Title</label></div>
          <div><input class="form-control" name="title" #title></div>
@@ -20,7 +20,9 @@ import BookComponent from './book-component';
        <div class="form-group">
         <button (click)="add(title, comment)" class="btn btn-primary">Submit</button>
        </div>
-     </form>
+     </div>
+
+     <hr>
      <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
 })
