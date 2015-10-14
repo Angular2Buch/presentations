@@ -126,7 +126,7 @@
 
                     <section data-markdown>
                         ![](img/angular2-logo.svg)
-                        ## Hallo NG2
+                        ## Bootstrap
                     </section>
 
                     <section data-markdown>
@@ -172,40 +172,59 @@
                 <section>
 
                     <section data-markdown>
-                        ## Ein wenig mehr Logik
+                        ![](img/angular2-logo.svg)
+                        ## Components &amp; Views
                     </section>
 
                     <section data-markdown>
-                        ## Die Bücher-Klasse
+                        ## Bücher Klasse
+                        Datenmodelle verwenden
                         ```typescript|contenteditable|data-show-source=../book-rating-app/models/book.ts
                         loading...
                         ```
                     </section>
 
                     <section data-markdown>
-                        ## Bücher-Komponente
-                        ```typescript|contenteditable|data-show-source=../book-rating-app/components/book-component.ts
+                        ## Komponente erstellen
+                        ```typescript|contenteditable|small|data-show-source=./samples/components/book-component/with-input.ts
                         loading...
                         ```
                     </section>
 
                     <section data-markdown>
-                        ## Temlate Binding
+                        ## Template Binding
                         Wie in AngularJS 1.X können Daten via `{{}}` gebunden werden
-                        ```typescript|contenteditable|data-show-source=./samples/components/book-rating/template-binding.html
+                        ```html|contenteditable|data-show-source=./samples/components/book-rating/template-binding.html
                         loading...
                         ```
                     </section>
 
                     <section data-markdown>
-                        ## Anpassen unserer BookRankingApp
-                        ```typescript|contenteditable|data-show-source=./samples/components/book-rating/book-rating-imports.ts
+                        ## Komponente einbinden
+                        ```typescript|contenteditable|small|data-show-source=./samples/components/book-rating/book-rating-mini.ts
                         loading...
                         ```
                     </section>
 
                     <section data-markdown>
-                        ```typescript|contenteditable|data-show-source=./samples/components/book-rating/book-rating-@view.ts
+                        ## [Property Binding]
+                        Property bindings sind durch `[]` gekennzeichnet.
+                        ```html|contenteditable|data-show-source=./samples/components/book-rating/property-binding.html
+                        loading...
+                        ```
+                    </section>
+                </section>
+
+                <section>
+                    <section data-markdown>
+                        ![](img/angular2-logo.svg)
+                        ## Forms
+                    </section>
+
+                    <section data-markdown>
+                        ## Formular erweitern
+                        Komponente referenzieren
+                        ```typescript|contenteditable|small|data-show-source=./samples/components/book-rating/book-rating-@view.ts
                         loading...
                         ```
                     </section>
@@ -223,7 +242,7 @@
                     </section>
 
                     <section data-markdown>
-                        ## Event Binding
+                        ## (Event Binding)
                         Event bindings sind durch `()` gekennzeichnet.
 
                         ```html|contenteditable|data-show-source=./samples/components/book-rating/event-binding.html
@@ -232,116 +251,24 @@
                     </section>
 
                     <section data-markdown>
-                        ## Property Binding
-                        Property bindings sind durch `[]` gekennzeichnet.
-                        ```html|contenteditable|data-show-source=./samples/components/book-rating/property-binding.html
-                        loading...
-                        ```
-                    </section>
-
-                    <section data-markdown>
-                        ```typescript|contenteditable|data-show-source=./samples/components/book-rating/book-rating-class.ts
+                        ## Interaktion
+                        Klassen sind die neuen Controller
+                        ```typescript|contenteditable|small|data-show-source=./samples/components/book-rating/book-rating-class.ts
                         loading...
                         ```
                     </section>
 
                 </section>
-
-
 
                 <section>
                     <section data-markdown>
-                        ## Nun noch die Vote-Funktion
-                        ```typescript|contenteditable
-                        // imports/Article.ts
-                        export default class Article {
-                          ...
-                          votes : number;
-
-                          constructor(title, link) {
-                            ...
-                            this.votes = 0;
-                          }
-                          voteUp() { this.votes += 1; }
-                          voteDown() { this.votes -= 1; }
-                        }
-                        ```
+                        ![](img/angular2-logo.svg)
+                        ## Data Flow
                     </section>
 
-                    <section data-markdown>
-                        ```typescript|contenteditable
-                        // imports/RankingBook.ts
-                        import { Component, View, EventEmitter } from 'angular2/angular2';
-                        ...
-                        @Component({
-                          ...
-                          events: ['voted']
-                        })
-                        @View({ template: `
-                            &lt;book>
-                              &lt;div class="votes">{{ book.votes }}&lt;/div>
-                              &lt;div class="main">
-                                ...
-                                &lt;ul>
-                                  &lt;li>&lt;a href (click)="voteUp()">upvote&lt;/a>&lt;/li>
-                                  &lt;li>&lt;a href (click)="voteDown()">downvote&lt;/a>&lt;/li>
-                                &lt;/ul>
-                              &lt;/div>
-                            &lt;/book>`
-                        })
-                        ```
-                    </section>
-
-                    <section data-markdown>
-                        ```typescript|contenteditable
-                        // imports/RankingBook.ts
-                        ...
-                        export default class RankingBook {
-                          ...
-                          voted: EventEmitter;
-
-                          constructor() {
-                            this.voted = new EventEmitter();
-                          }
-                          voteUp(){
-                            this.book.voteUp();
-                            this.voted.next(this.book);
-                            return false; // stop event propagation, avoid page reload
-                          }
-                          voteDown(){
-                            this.book.voteDown();
-                            this.voted.next(this.book);
-                            return false; // stop event propagation, avoid page reload
-                          }
-                        }
-                        ```
-                    </section>
+                    
                 </section>
 
-                <section data-markdown>
-                        ## Und nun noch sortieren
-                        ```typescript|contenteditable
-                        // imports/BookRankingApp.ts
-                        ...
-                        @View({
-                           directives: [RankingBook, NgFor],
-                           template: `
-                             ...
-                             &lt;book (voted)="sortList(article)">&lt;/book>
-                           `
-                        })
-                        export default class BookRankingApp {
-                          ...
-                          addBook(title, link) {
-                            ...
-                            this.sortList(newBook);
-                          }
-                          sortList(book) {
-                            this.books.sort((a, b) => b.votes - a.votes);
-                          }
-                        }
-                        ```
-                </section>
 
 
 

@@ -26,7 +26,7 @@ import BookComponent from './book-component';
      <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
 })
-export default class BookRanking {
+export default class BookRating {
   books: Array<Book>;
 
   constructor() {

@@ -1,18 +1,22 @@
-// book-ranking.ts
+// book-rating.ts
 @View({
-  directives: [RankedBook, NgFor],
+  directives: [BookComponent, NgFor],
   template: `
-     <section class="new-link">
-       <div class="control-group">
-         <div><label for="title">Title:</label></div>
-         <div><input name="title" #title></div>
+     <div class="form">
+       <div class="form-group">
+         <div><label for="title">Title</label></div>
+         <div><input class="form-control" name="title" #title></div>
        </div>
-       <div class="control-group">
-         <div><label for="link">Link:</label></div>
-         <div><input name="link" #link/></div>
+       <div class="form-group">
+         <div><label for="link">Comment</label></div>
+         <div><textarea class="form-control" name="comment" #comment></textarea></div>
        </div>
-       <button (click)="add(title, link)">Submit</button>
-     </section>
-     <book *ng-for="#book of books" [book]="book"></book>
+       <div class="form-group">
+        <button (click)="add(title, comment)" class="btn btn-primary">Submit</button>
+       </div>
+     </div>
+
+     <hr>
+     <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
 })

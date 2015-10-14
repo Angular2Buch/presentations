@@ -1,15 +1,17 @@
-// book-ranking.ts
-export default class BookRanking {
+// book-rating.ts
+export default class BookRating {
   books: Array<Book>;
+
   constructor() {
     this.books = [
-      new Book('ExampleBook', 'http://mybook.org'),
+      new Book('Angular 2', 'Eine praktische Einführung')
     ];
   }
-  add(title, link) {
-    this.books.push(new Book(title.value, link.value););
+
+  add(title, comment) {
+    var newBook = new Book(title.value, comment.value);
+    this.books.push(newBook);
 
     title.value = '';
-    link.value = '';
+    comment.value = '';
   }
-}

@@ -10,7 +10,7 @@ import {Component, View} from 'angular2/angular2';
     <p>{{ books }}</p>
    `
 })
-export default class BookRanking {
+export default class BookRating {
   books: Array<string>;
 
   constructor() {
