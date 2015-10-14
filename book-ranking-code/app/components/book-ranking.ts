@@ -10,14 +10,14 @@ import BookComponent from './book-component';
   template: `
      <section class="new-link">
        <div class="control-group">
-         <div><label for="title">Title:</label></div>
+         <div><label for="title">Title</label></div>
          <div><input name="title" #title></div>
        </div>
        <div class="control-group">
-         <div><label for="link">Link:</label></div>
-         <div><input name="link" #link/></div>
+         <div><label for="link">Comment</label></div>
+         <div><textarea name="comment" #comment></textarea></div>
        </div>
-       <button (click)="add(title, link)">Submit</button>
+       <button (click)="add(title, comment)">Submit</button>
      </section>
      <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
    `
@@ -32,12 +32,12 @@ export default class BookRanking {
     ];
   }
 
-  add(title, link) {
-    var newBook = new Book(title.value, link.value);
+  add(title, comment) {
+    var newBook = new Book(title.value, comment.value);
     this.books.push(newBook);
 
     title.value = '';
-    link.value = '';
+    comment.value = '';
   }
 
   reorderBooks(book: Book) {

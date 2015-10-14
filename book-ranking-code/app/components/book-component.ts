@@ -9,8 +9,7 @@ import Book from '../models/book';
 @View({
   template: `
     <div class="main">
-      <h2>
-        <a href="{{ book.link }}">{{ book.title }} {{ book.rating }}</a>
+      <h2>{{ book.title }}</h2><small>Stars {{ book.rating }}</small>
         <button (click)="rateUp()">Rate up</button>
         <button (click)="rateDown()">Rate down</button>
         <hr />

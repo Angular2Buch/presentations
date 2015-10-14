@@ -1,10 +1,10 @@
 export default class Book {
   title: string;
-  link: string;
+  comment: string;
   rating: number = 0;
 
-  constructor(title, link) {
+  constructor(title, comment) {
     this.title = title;
-    this.link = link;
+    this.comment = comment;
   }
 }
