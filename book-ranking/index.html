@@ -209,27 +209,8 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript|contenteditable
-                        // imports/BookRankingApp.ts
-                        ...
-                        @View({
-                          directives: [RankingBook, NgFor],
-                          template: `
-                             &lt;section class="new-link">
-                               &lt;div class="control-group">
-                                 &lt;div>&lt;label for="title">Title:&lt;/label>&lt;/div>
-                                 &lt;div>&lt;input name="title" #newtitle>&lt;/div>
-                               &lt;/div>
-                               &lt;div class="control-group">
-                                 &lt;div>&lt;label for="link">Link:&lt;/label>&lt;/div>
-                                 &lt;div>&lt;input name="link" #newlink/>&lt;/div>
-                               &lt;/div>
-                               &lt;button (click)="addBook(newtitle, newlink)">Submit&lt;/button>
-                             &lt;/section>
-                             &lt;book *ng-for="#book of books" [book]="book">&lt;/book>
-                           `
-                        })
-                        ...
+                        ```typescript|contenteditable|data-show-source=./samples/components/book-ranking/book-ranking-@view.ts
+                        loading...
                         ```
                     </section>
 
@@ -263,24 +244,8 @@
                     </section>
 
                     <section data-markdown>
-                        ```typescript|contenteditable
-                        // imports/BookRankingApp.ts
-                        ...
-                        export default class BookRankingApp {
-                           books: Array<Book>
-                           constructor() {
-                              this.books = [
-                                 new Book('ExampleBook', 'http://mybook.org'),
-                                 new Book('AnotherExample', 'http://yourbook.com')
-                              ]
-                           }
-                           addBook(title, link) {
-                              var newBook = new Book(title.value, link.value);
-                              this.books.push(newBook);
-                              title.value = '';
-                              link.value  = '';
-                           }
-                        }
+                        ```typescript|contenteditable|data-show-source=./samples/components/book-ranking/book-ranking-class.ts
+                        loading...
                         ```
                     </section>
 
