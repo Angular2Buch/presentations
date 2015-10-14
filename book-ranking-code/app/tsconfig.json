@@ -14,7 +14,9 @@
     "newLine": "LF"
   },
   "files": [
-    "app.ts",
+    "components/app.ts",
+    "components/book.ts",
+    "components/ranked-book.ts",
     "typings/angular2/angular2.d.ts",
     "typings/es6-shim/es6-shim.d.ts"
   ],
