@@ -14,7 +14,7 @@
     "newLine": "LF"
   },
   "files": [
-    "components/app.ts",
+    "app.ts",
     "typings/angular2/angular2.d.ts",
     "typings/es6-shim/es6-shim.d.ts"
   ],
