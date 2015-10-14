@@ -3,7 +3,7 @@ import Book from '../models/book';
 import BookComponent from './book-component';
 
 @Component({
-  selector: 'book-ranking'
+  selector: 'book-rating'
 })
 @View({
   directives: [BookComponent, NgFor],
