@@ -4,3 +4,6 @@ Thumbs.db
 ignore.*
 node_modules/
 npm-debug.log
+
+.js
+.js.map
