@@ -551,3 +551,21 @@ ul.model {
     max-height: none; }
 
 /* END: device preview */
+html body {
+  background-image: url("../../img/pixel.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+html.typescript body {
+  background-image: url("../../img/typescript-logo-state.svg");
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+
+html.typescript h1, html.typescript h2, html.typescript h3, html.typescript h4, html.typescript strong {
+  color: #007ACC !important; }
