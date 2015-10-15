@@ -99,7 +99,7 @@
 
 
 
-                <section  data-state="typescript">
+                <section data-state="typescript">
 
                     <section data-markdown>
                         <script type="text/template">
@@ -135,17 +135,19 @@
 
 
 
-                <section>
+                <section data-state="teal400">
 
                     <section data-markdown>
-                        ![Angular 2 Logo](img/angular2-logo.svg)
-                        ## Bootstrapping
+                        <script type="text/template">
+                            <i class="fa fa-rocket" style="font-size:6em;"></i>
+                            ## Bootstrapping
+                        </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                            ### index.html
-
+                            ## index.html
+                            <small>SystemJS lädt app</small>
                             ```html|data-show-source=../book-rating-app/index.html
                             loading...
                             ```
@@ -155,7 +157,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## book-rating.ts
-                            #### Komponente mit Dekoratoren
+                            <small>Komponente mit Dekoratoren</small>
                             <br/>
 
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts                            loading...
@@ -164,10 +166,13 @@
                     </section>
 
                     <section data-markdown>
-                        ## Laden der App
-                        ```typescript|contenteditable|spellcheck=false|data-show-source=../book-rating-app/app.ts
-                        loading...
-                        ```
+                        <script type="text/template">
+                            ## Laden der App
+                            <small>bootstrap der ersten Start-Komponente</small>
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=../book-rating-app/app.ts
+                            loading...
+                            ```
+                        </script>
                     </section>
 
                 </section>

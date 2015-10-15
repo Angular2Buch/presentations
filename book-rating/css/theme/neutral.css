@@ -558,7 +558,7 @@ ul.model {
     max-height: none; }
 
 /* END: device preview */
-html .reveal {
+.reveal {
   background-image: url("../../img/pixel.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -567,12 +567,23 @@ html .reveal {
   -o-transition: none;
   transition: none; }
 
-html.typescript .reveal {
+.typescript .reveal {
   background-image: url("../../img/typescript-logo-state.png");
   background-position: 10px 10px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  html.typescript .reveal h1, html.typescript .reveal h2, html.typescript .reveal h3, html.typescript .reveal h4, html.typescript .reveal strong {
+  .typescript .reveal h1, .typescript .reveal h2, .typescript .reveal h3, .typescript .reveal h4, .typescript .reveal strong, .typescript .reveal i {
     color: #007ACC !important; }
+
+.teal400 .reveal {
+  background-image: none; }
+  .teal400 .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "\f135";
+    color: #26A69A;
+    margin-top: 10px;
+    margin-left: 10px; }
+  .teal400 .reveal h1, .teal400 .reveal h2, .teal400 .reveal h3, .teal400 .reveal h4, .teal400 .reveal strong, .teal400 .reveal i {
+    color: #26A69A !important; }

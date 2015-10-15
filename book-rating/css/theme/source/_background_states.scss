@@ -1,30 +1,46 @@
-html {
-
-    .reveal {
-        background-image: url('../../img/pixel.png');
-        background-repeat: no-repeat;
-        background-position: left top;
-
-        -webkit-transition: none;
-        -moz-transition: none;
-        -o-transition: none;
-        transition: none;
-    }
+@mixin transition ($t) {
+  -webkit-transition: $t;
+  -moz-transition: $t;
+  -o-transition: $t;
+  transition: $t;
 }
 
-html.typescript {
+.reveal {
+    background-image: url('../../img/pixel.png');
+    background-repeat: no-repeat;
+    background-position: left top;
 
+    @include transition(none);
+}
+
+
+.typescript {
     .reveal {
         background-image: url('../../img/typescript-logo-state.png');
         background-position: 10px 10px;
 
-        -webkit-transition: background-image 0.8s linear;
-        -moz-transition: background-image 0.8s linear;
-        -o-transition: background-image 0.8s linear;
-        transition: background-image 0.8s linear;
+        @include transition(background-image 0.8s linear);
 
-        h1, h2, h3, h4, strong {
+        h1, h2, h3, h4, strong, i {
             color: #007ACC !important;
+        }
+    }
+}
+
+.teal400 {
+      .reveal {
+        background-image: none;
+
+        &::before {
+            font: normal normal normal 3em FontAwesome;
+            content: "\f135";
+            color: #26A69A;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        h1, h2, h3, h4, strong, i {
+            color: #26A69A !important;
         }
     }
 }
