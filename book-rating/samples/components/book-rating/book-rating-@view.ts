@@ -12,7 +12,7 @@
          <div><textarea class="form-control" name="comment" #comment></textarea></div>
        </div>
        <div class="form-group">
-        <button (click)="add(title, comment)" class="btn btn-primary">Submit</button>
+        <button (click)="add(title, comment)" class="btn btn-danger">Submit</button>
        </div>
      </div>
 

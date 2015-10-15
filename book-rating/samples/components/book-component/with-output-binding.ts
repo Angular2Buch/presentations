@@ -1,3 +1,4 @@
+// book-component.ts
 import { Component, View, EventEmitter } from 'angular2/angular2';
 import Book from '../models/book';
 

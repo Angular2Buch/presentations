@@ -30,7 +30,7 @@ var BookComponent = (function () {
             outputs: ['rated']
         }),
         angular2_1.View({
-            template: "\n    <div class=\"well\">\n      <div class=\"thumbnail pull-right\">\n        <img src=\"http://www.gravatar.com/avatar/{{ book.rating }}?s=80&default=wavatar&forcedefault=1\"/>\n      </div>\n      <h2>{{ book.title }} <small>Stars {{ book.rating }}</small></h2>\n      <p>{{ book.comment }}</p>\n\n      <button (click)=\"rateUp()\" class=\"btn btn-default glyphicon glyphicon-thumbs-up\"></button>\n      <button (click)=\"rateDown()\" class=\"btn btn-default glyphicon glyphicon-thumbs-down\"></button>\n    </div>\n  "
+            template: "\n    <div class=\"well\">\n      <div class=\"thumbnail pull-right\">\n        <img src=\"http://www.gravatar.com/avatar/{{ book.rating }}?s=80&default=wavatar\"/>\n      </div>\n      <h2>{{ book.title }} <small>Stars {{ book.rating }}</small></h2>\n      <p>{{ book.comment }}</p>\n\n      <button (click)=\"rateUp()\" class=\"btn btn-default glyphicon glyphicon-thumbs-up\"></button>\n      <button (click)=\"rateDown()\" class=\"btn btn-default glyphicon glyphicon-thumbs-down\"></button>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], BookComponent);

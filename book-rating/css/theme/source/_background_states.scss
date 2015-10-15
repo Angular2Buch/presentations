@@ -15,7 +15,8 @@ html {
 html.typescript {
 
     .reveal {
-        background-image: url('../../img/typescript-logo-state.svg');
+        background-image: url('../../img/typescript-logo-state.png');
+        background-position: 10px 10px;
 
         -webkit-transition: background-image 0.8s linear;
         -moz-transition: background-image 0.8s linear;

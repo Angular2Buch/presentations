@@ -10,10 +10,10 @@ import Book from '../models/book';
   template: `
     <div class="well">
       <div class="thumbnail pull-right">
-        <img src="http://www.gravatar.com/avatar/BEWERTUNG?s=80&default=wavatar&forcedefault=1"/>
+        <img src="http://www.gravatar.com/avatar/__BEWERTUNG__?s=80&default=wavatar"/>
       </div>
-      <h2>TITEL <small>Stars BEWERTUNG</small></h2>
-      <p>KOMMENTAR</p>
+      <h2>__TITEL__ <small>Stars __BEWERTUNG__</small></h2>
+      <p>__KOMMENTAR__</p>
 
     </div>
   `

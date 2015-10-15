@@ -25,6 +25,9 @@
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
+strong {
+  color: #a1292b; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -565,7 +568,8 @@ html .reveal {
   transition: none; }
 
 html.typescript .reveal {
-  background-image: url("../../img/typescript-logo-state.svg");
+  background-image: url("../../img/typescript-logo-state.png");
+  background-position: 10px 10px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;

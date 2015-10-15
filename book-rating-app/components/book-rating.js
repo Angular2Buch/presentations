@@ -34,7 +34,7 @@ var BookRating = (function () {
         }),
         angular2_1.View({
             directives: [book_component_1.default, angular2_1.NgFor],
-            template: "\n     <div class=\"form\">\n       <div class=\"form-group\">\n         <div><label for=\"title\">Title</label></div>\n         <div><input class=\"form-control\" name=\"title\" #title></div>\n       </div>\n       <div class=\"form-group\">\n         <div><label for=\"link\">Comment</label></div>\n         <div><textarea class=\"form-control\" name=\"comment\" #comment></textarea></div>\n       </div>\n       <div class=\"form-group\">\n        <button (click)=\"add(title, comment)\" class=\"btn btn-primary\">Submit</button>\n       </div>\n     </div>\n\n     <hr>\n     <book *ng-for=\"#book of books\" [book]=\"book\" (rated)=\"reorderBooks(book)\"></book>\n   "
+            template: "\n     <div class=\"form\">\n       <div class=\"form-group\">\n         <div><label for=\"title\">Title</label></div>\n         <div><input class=\"form-control\" name=\"title\" #title></div>\n       </div>\n       <div class=\"form-group\">\n         <div><label for=\"link\">Comment</label></div>\n         <div><textarea class=\"form-control\" name=\"comment\" #comment></textarea></div>\n       </div>\n       <div class=\"form-group\">\n        <button (click)=\"add(title, comment)\" class=\"btn btn-danger\">Submit</button>\n       </div>\n     </div>\n\n     <hr>\n     <book *ng-for=\"#book of books\" [book]=\"book\" (rated)=\"reorderBooks(book)\"></book>\n   "
         }), 
         __metadata('design:paramtypes', [])
     ], BookRating);

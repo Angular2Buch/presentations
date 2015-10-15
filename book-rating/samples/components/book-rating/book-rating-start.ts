@@ -1,3 +1,4 @@
+// book-rating.ts
 import {Component, View} from 'angular2/angular2';
 
 @Component({

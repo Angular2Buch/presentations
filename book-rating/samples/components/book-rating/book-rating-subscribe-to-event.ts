@@ -1,3 +1,4 @@
+// book-rating.ts
 import {Component, View, NgFor} from 'angular2/angular2';
 import Book from '../models/book';
 import BookComponent from './book-component';

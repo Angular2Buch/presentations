@@ -1,3 +1,4 @@
+// book-rating.ts
 import {Component, View, NgFor} from 'angular2/angular2';
 import Book from '../models/book';
 import BookComponent from './book-component';
@@ -18,7 +19,7 @@ import BookComponent from './book-component';
          <div><textarea class="form-control" name="comment" #comment></textarea></div>
        </div>
        <div class="form-group">
-        <button (click)="add(title, comment)" class="btn btn-primary">Submit</button>
+        <button (click)="add(title, comment)" class="btn btn-danger">Submit</button>
        </div>
      </div>
 

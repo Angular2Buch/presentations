@@ -1,3 +1,4 @@
+// book-component.ts
 import { Component, View, EventEmitter } from 'angular2/angular2';
 import Book from '../models/book';
 
@@ -10,7 +11,7 @@ import Book from '../models/book';
   template: `
     <div class="well">
       <div class="thumbnail pull-right">
-        <img src="http://www.gravatar.com/avatar/{{ book.rating }}?s=80&default=wavatar&forcedefault=1"/>
+        <img src="http://www.gravatar.com/avatar/{{ book.rating }}?s=80&default=wavatar"/>
       </div>
       <h2>{{ book.title }} <small>Stars {{ book.rating }}</small></h2>
       <p>{{ book.comment }}</p>
