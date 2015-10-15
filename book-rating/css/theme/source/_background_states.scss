@@ -1,6 +1,6 @@
 html {
 
-    body {
+    .reveal {
         background-image: url('../../img/pixel.png');
         background-repeat: no-repeat;
         background-position: left top;
@@ -14,16 +14,16 @@ html {
 
 html.typescript {
 
-    body {
+    .reveal {
         background-image: url('../../img/typescript-logo-state.svg');
 
         -webkit-transition: background-image 0.8s linear;
         -moz-transition: background-image 0.8s linear;
         -o-transition: background-image 0.8s linear;
         transition: background-image 0.8s linear;
-    }
 
-    h1, h2, h3, h4, strong {
-        color: #007ACC !important;
+        h1, h2, h3, h4, strong {
+            color: #007ACC !important;
+        }
     }
 }

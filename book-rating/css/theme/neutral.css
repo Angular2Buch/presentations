@@ -524,6 +524,10 @@ ul.model {
 .fa-5x {
   font-size: 5em !important; }
 
+/* fix ionicons */
+.ion {
+  color: #a1292b; }
+
 /* device preview */
 .device-preview {
   height: 810px;
@@ -551,7 +555,7 @@ ul.model {
     max-height: none; }
 
 /* END: device preview */
-html body {
+html .reveal {
   background-image: url("../../img/pixel.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -560,12 +564,11 @@ html body {
   -o-transition: none;
   transition: none; }
 
-html.typescript body {
+html.typescript .reveal {
   background-image: url("../../img/typescript-logo-state.svg");
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-
-html.typescript h1, html.typescript h2, html.typescript h3, html.typescript h4, html.typescript strong {
-  color: #007ACC !important; }
+  html.typescript .reveal h1, html.typescript .reveal h2, html.typescript .reveal h3, html.typescript .reveal h4, html.typescript .reveal strong {
+    color: #007ACC !important; }
