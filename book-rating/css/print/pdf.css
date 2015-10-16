@@ -155,3 +155,8 @@ ul, ol, div, p {
 	z-index: 1;
 }
 
+/* fixing print to pdf, since our data-show-source is messing this up */
+.reveal pre {
+    min-height: 400px;
+    box-shadow: none;
+}
