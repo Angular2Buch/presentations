@@ -219,6 +219,12 @@ ul.model {
       color: $headingColor;
 }
 
+@media print {
+    .hidePrint {
+        display: none !important;
+    }
+}
+
 /* device preview */
 
 .device-preview {

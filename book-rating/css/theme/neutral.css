@@ -532,6 +532,10 @@ ul.model {
 .ion {
   color: #a1292b; }
 
+@media print {
+  .hidePrint {
+    display: none !important; } }
+
 /* device preview */
 .device-preview {
   height: 810px;
