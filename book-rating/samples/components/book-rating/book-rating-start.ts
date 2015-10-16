@@ -2,10 +2,10 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-  selector: 'book-ranking'
+  selector: 'book-rating'
 })
 @View({
-  directives: [BookComponent, NgFor],
+  directives: [], // later: BookComponent, NgFor
   template: `
     <h1>Bücher</h1>
     <p>{{ books }}</p>
