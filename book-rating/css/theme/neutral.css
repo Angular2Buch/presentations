@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * A theme for reveal.js by johannes (copy of white.scss)
  */
@@ -577,13 +578,46 @@ ul.model {
   .typescript .reveal h1, .typescript .reveal h2, .typescript .reveal h3, .typescript .reveal h4, .typescript .reveal strong, .typescript .reveal i {
     color: #007ACC !important; }
 
-.teal400 .reveal {
+.ng-shield {
+  margin: auto;
+  width: 353px;
+  height: 372px;
+  background: url("../../img/angular2-shield.svg") no-repeat top left; }
+  .ng-shield::before {
+    font-size: 6em;
+    color: white;
+    line-height: 1.6em; }
+
+.star .reveal {
   background-image: none; }
-  .teal400 .reveal::before {
+  .star .reveal::before {
     font: normal normal normal 3em FontAwesome;
-    content: "\f135";
-    color: #26A69A;
-    margin-top: 10px;
+    content: "";
+    color: #a1292b;
     margin-left: 10px; }
-  .teal400 .reveal h1, .teal400 .reveal h2, .teal400 .reveal h3, .teal400 .reveal h4, .teal400 .reveal strong, .teal400 .reveal i {
-    color: #26A69A !important; }
+  .star .reveal::before {
+    line-height: 1.2em; }
+
+.code .reveal {
+  background-image: none; }
+  .code .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+
+.forms .reveal {
+  background-image: none; }
+  .forms .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+
+.refresh .reveal {
+  background-image: none; }
+  .refresh .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }

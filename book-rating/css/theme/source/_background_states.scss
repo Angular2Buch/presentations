@@ -5,6 +5,12 @@
   transition: $t;
 }
 
+@mixin color($color) {
+    h1, h2, h3, h4, strong, i {
+        color: $color !important;
+    }
+}
+
 .reveal {
     background-image: url('../../img/pixel.png');
     background-repeat: no-repeat;
@@ -20,27 +26,60 @@
         background-position: 10px 10px;
 
         @include transition(background-image 0.8s linear);
-
-        h1, h2, h3, h4, strong, i {
-            color: #007ACC !important;
-        }
+        @include color(#007ACC);
     }
 }
 
-.teal400 {
+.ng-shield {
+    margin: auto;
+    width: 353px;
+    height: 372px;
+    background: url('../../img/angular2-shield.svg') no-repeat top left;
+
+    &::before {
+      font-size:6em;
+      color: white;
+      line-height: 1.6em;
+
+    }
+}
+
+@mixin revealAwesome ($content) {
+  &::before {
+      font: normal normal normal 3em FontAwesome;
+      content: $content;
+      color: $headingColor;
+      margin-left: 10px;
+  }
+}
+
+.star {
       .reveal {
-        background-image: none;
+          background-image: none;
+          @include revealAwesome("\f006")
+          &::before {
+              line-height: 1.2em;
+          }
+    }
+}
 
-        &::before {
-            font: normal normal normal 3em FontAwesome;
-            content: "\f135";
-            color: #26A69A;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
+.code {
+      .reveal {
+          background-image: none;
+          @include revealAwesome("\f121")
+    }
+}
 
-        h1, h2, h3, h4, strong, i {
-            color: #26A69A !important;
-        }
+.forms {
+      .reveal {
+          background-image: none;
+          @include revealAwesome("\f046")
+    }
+}
+
+.refresh {
+      .reveal {
+          background-image: none;
+          @include revealAwesome("\f021")
     }
 }
