@@ -4,3 +4,5 @@ Thumbs.db
 ignore.*
 node_modules/
 npm-debug.log
+
+book-rating-livecoding/

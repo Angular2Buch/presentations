@@ -1,3 +1,4 @@
+// book.ts
 export default class Book {
   title: string;
   comment: string;
