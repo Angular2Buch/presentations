@@ -18,13 +18,7 @@
   ],
   "files": [
     "app.ts",
-    "components/book-component.ts",
-    "components/book-rating.ts",
-    "models/book.ts",
     "typings/angular2/angular2.d.ts",
-    "typings/angular2/http.d.ts",
-    "typings/angular2/router.d.ts",
-    "typings/angular2/test_lib.d.ts",
     "typings/es6-shim/es6-shim.d.ts"
   ],
   "exclude": []
