@@ -4,7 +4,7 @@ import Book from '../models/book';
 
 @Component({
   selector: 'book',
-  inputs: ['book'],
+  inputs: ['book'], // <-- input!
 })
 @View({
   template: `

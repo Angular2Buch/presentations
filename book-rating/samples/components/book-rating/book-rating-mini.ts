@@ -14,7 +14,8 @@ import BookComponent from './book-component';
    `
 })
 export default class BookRating {
-  books: Array<Book>;
+  //books: Array<Book>;
+  book: Book;
 
   constructor() {
     this.book = new Book('Angular 2', 'Eine praktische Einführung');

@@ -159,11 +159,13 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## book-rating.ts
-                            <small>Komponente mit Dekoratoren</small>
-
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts                            loading...
+                            ## BookRating
+                            <small>__Komponente__ soll zunächst nur ein `Array<string>` darstellen</small>
+                            
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts                            
+                            loading...
                             ```
+                            <small>Neu: Dekoratoren</small>
                         </script>
                     </section>
 
@@ -200,7 +202,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Bücher Klasse
-                            <small>Datenmodelle verwenden</small>
+                            <small>TypeScript Typen verwenden</small>
 
                             ```typescript|contenteditable|spellcheck=false|data-show-source=../book-rating-app/models/book.ts
                             loading...
@@ -210,8 +212,8 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## 1. Komponente
-                            <small>__BookComponent__ soll ein einzelnes Buch anzeigen</small>
+                            ## BookComponent
+                            <small>__Komponente__ soll ein einzelnes Buch anzeigen</small>
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-input.ts
                             loading...
                             ```
@@ -221,7 +223,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Template Binding
-                            <small>Wie in AngularJS 1.X können Daten via `{{ }}` gebunden werden</small>
+                            <small>Interpolation: Daten können via __`{{ }}`__ gebunden werden</small>
 
                             ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/template-binding.html
                             loading...
@@ -231,8 +233,8 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## 2. Komponente
-                            <small>__BookRating __ soll später mehre Bücher und ein Formular anzeigen</small>
+                            ## BookRating
+                            <small>__Komponente__ zunächst ein einziges Buch anzeigen</small>
 
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-mini.ts
                             loading...
@@ -243,12 +245,15 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## [Property Binding]
-                            <small>Property bindings sind durch `[]` gekennzeichnet.</small>
+                            ## [Property bindings]
+                            <small>Ziel: __inputs__ der gebundenen Komponente<br>
+                            Property bindings sind durch __`[]`__ gekennzeichnet</small>   
+                            <br>
 
                             ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/property-binding.html
                             loading...
                             ```
+                           
                         </script>
                     </section>
                 </section>
@@ -257,15 +262,15 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            <i class="ng-shield fa fa-check-square-o"></i>
+                            <i class="ng-shield fa fa-check-square-o ng-shield-fix-shield"></i>
                             ## Forms
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## Formular erweitern
-                            <small>Komponente referenzieren</small>
+                            ## Formular
+                            <small>__BookRating__ erhält zusätzliche Interaktionselemente</small>
 
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-@view.ts
                             loading...
@@ -276,7 +281,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Referenz Variablen
-                            <small>Mit einer # kann man eine Referenz initialisieren.</small>
+                            <small>Mit einer __#__ kann man eine Referenz initialisieren.</small>
 
                             ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/reference-variables.html
                             loading...
@@ -288,7 +293,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## (Event Binding)
-                            <small>Event bindings sind durch `()` gekennzeichnet.</small>
+                            <small>Event bindings sind durch __`()`__ gekennzeichnet.</small>
 
                             ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/event-binding.html
                             loading...
@@ -321,28 +326,34 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Interne Ereignisse
-                            Bücher bewerten
+                            <small>Bücher bewerten</small>
 
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-rating.ts
                             loading...
                             ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
                         <script type="text/template">
+                            ## Externe Ereignisse
+                            <small>Sender: __outputs__ senden Event aus Komponente heraus</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-output-binding.ts
+                            loading...
+                            ```
+                        </script>
                     </section>
 
                     <section data-markdown>
-                        ## Über die Komponente hinaus...
+                        <script type="text/template">
+                            ## Auf Event reagieren
+                            <small>Empfänger: __(event binding)__</small>                            
 
-                        ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-output-binding.ts
-                        loading...
-                        ```
-                    </section>
-
-                    <section data-markdown>
-                        ## Auf Events von Komponenten reagieren
-
-                        ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-subscribe-to-event.ts
-                        loading...
-                        ```
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-subscribe-to-event.ts
+                            loading...
+                            ```
+                        </script>
                     </section>
                 </section>
 

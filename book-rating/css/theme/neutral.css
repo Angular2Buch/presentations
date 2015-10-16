@@ -588,6 +588,9 @@ ul.model {
     color: white;
     line-height: 1.6em; }
 
+.ng-shield-fix-shield::before {
+  margin-left: 16px; }
+
 .star .reveal {
   background-image: none; }
   .star .reveal::before {

@@ -4,7 +4,7 @@ import Book from '../models/book';
 
 @Component({
   /* ... */
-  outputs: ['rated']
+  outputs: ['rated'] // <-- output!
 })
 @View({
   /* ... */

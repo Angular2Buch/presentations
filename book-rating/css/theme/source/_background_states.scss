@@ -1,8 +1,8 @@
 @mixin transition ($t) {
-  -webkit-transition: $t;
-  -moz-transition: $t;
-  -o-transition: $t;
-  transition: $t;
+    -webkit-transition: $t;
+    -moz-transition: $t;
+    -o-transition: $t;
+    transition: $t;
 }
 
 @mixin color($color) {
@@ -37,49 +37,54 @@
     background: url('../../img/angular2-shield.svg') no-repeat top left;
 
     &::before {
-      font-size:6em;
-      color: white;
-      line-height: 1.6em;
+        font-size:6em;
+        color: white;
+        line-height: 1.6em;
+    }
+}
 
+.ng-shield-fix-shield {
+    &::before {
+        margin-left: 16px;
     }
 }
 
 @mixin revealAwesome ($content) {
-  &::before {
-      font: normal normal normal 3em FontAwesome;
-      content: $content;
-      color: $headingColor;
-      margin-left: 10px;
-  }
+    &::before {
+        font: normal normal normal 3em FontAwesome;
+        content: $content;
+        color: $headingColor;
+        margin-left: 10px;
+    }
 }
 
 .star {
-      .reveal {
-          background-image: none;
-          @include revealAwesome("\f006")
-          &::before {
-              line-height: 1.2em;
-          }
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f006")
+        &::before {
+            line-height: 1.2em;
+        }
     }
 }
 
 .code {
-      .reveal {
-          background-image: none;
-          @include revealAwesome("\f121")
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f121")
     }
 }
 
 .forms {
-      .reveal {
-          background-image: none;
-          @include revealAwesome("\f046")
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f046")
     }
 }
 
 .refresh {
-      .reveal {
-          background-image: none;
-          @include revealAwesome("\f021")
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f021")
     }
 }
