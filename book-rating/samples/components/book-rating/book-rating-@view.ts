@@ -17,6 +17,6 @@
      </div>
 
      <hr>
-     <book *ng-for="#book of books" [book]="book" (rated)="reorderBooks(book)"></book>
+     <book *ng-for="#book of books" [book]="book"></book>
    `
 })
