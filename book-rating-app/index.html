@@ -15,8 +15,14 @@
   -->
 
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  <script src="lib/system@0.18.17.js"></script>
-  <script src="lib/angular2.dev.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/angular2/bundles\angular2.dev.js"></script>
+  <script>
+    System.config({
+      packages: {'app': {defaultExtension: 'js'}}
+    });
+    System.import('app/app')
+  </script>
 
   <style> img { max-width: 25% } </style>
 </head>
@@ -29,10 +35,6 @@
 </h1>
 
 <book-rating></book-rating>
-
-<script>
-  System.import('./app')
-</script>
 
 <!--STOP-->
 </body>
