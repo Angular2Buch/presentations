@@ -34,7 +34,7 @@ Wichtig ist die Tatsache, dass man alle TypeScript-Dateien in einen Unterordner 
     <title>Angular 2 Demo</title>
 
     <script src="https://code.angularjs.org/tools/system.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-alpha.45/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.46/angular2.dev.js"></script>
 
     <script>
       System.config({
