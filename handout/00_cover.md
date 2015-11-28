@@ -15,6 +15,29 @@ In diesem Workshop werden wir auf maßgebliche Änderung eingehen. Das vorliegen
 **Wir wünschen Viel Spaß beim Kennenlernen von Angular 2.0 Alpha-46!**
 
 
+## Inhalt
+ 
+1. [Start mit Atom](01_start.md)
+2. [Template Syntax](02_templating.md)
+3. [Unit Tests](03_testing.md)
+
+
+## Quelltexte & Demos
+
+* zu 1. https://github.com/Angular2Buch/angular2-module
+* zu 2. https://github.com/Angular2Buch/template-syntax
+* zu 3. https://github.com/Angular2Buch/angular2-testing
+
+## Folien zur "book-rating-app"
+
+Während des Workshops entwickeln wir eine Anwendung mit Ihnen.
+Zur Unterstützung sehen Sie Quelltext-Fragmente in einem Folienset.
+Sie finden diese Folien unter:
+
+https://github.com/Angular2Buch/presentations
+
+![app](images/app.png)
+
 ## Über die Trainer
 
 ![Johannes Hoppe](images/johannes-hoppe.png)

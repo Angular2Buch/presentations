@@ -1,6 +1,6 @@
 # Presentation
 
-* [book-ranking](https://angular2buch.de/presentations/book-ranking/)  
+* [book-rating](https://angular2buch.de/presentations/book-rating/)  
   how to create a simple book ranking app with angular2
 
 

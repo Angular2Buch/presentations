@@ -1,14 +1,10 @@
-
-
-
-
 # Start: Angular 2.0 mit Atom nutzen
 
-
+Ein schnelles Setup von Angular 2 wird im Folgenden beschrieben. 
 
 
 <a name="installieren"></a>
-## 1. Atom und atom-typescript installieren
+## Atom und atom-typescript installieren
 
 1. [Atom](https://atom.io/) installieren - Admin-Rechte sind übrigens nicht notwendig
 2. [atom-typescript](https://atom.io/packages/atom-typescript) installieren - entweder über die grafische Oberfläche (Settings > Install) oder in der Shell per 
@@ -16,7 +12,7 @@
 
 
 <a name="projekt"></a>
-## 2. Projekt anlegen
+## Projekt anlegen
 
 Der Aufbau orientiert sich am Angular 2 Quickstart. Wir werden drei Dateien erstellen:
 
@@ -86,7 +82,7 @@ export default class MyAppComponent {
 
 
 <a name="transpilieren"></a>
-## 3. Transpilieren
+## Transpilieren
 
 Würden wir jetzt schon den Entwicklungsstand kontrollieren, so würden wie eine Fehlermeldung erhalten. Die ganze Logik liegt nämlich nur in Form von TypeScript-Dateien vor. Der Browser soll jedoch JavaScript-Dateien laden und ausführen.
 
@@ -126,7 +122,7 @@ live-server
 
 
 <a name="typings"></a>
-## 4. Angular 2.0 Type Definitions
+## Angular 2.0 Type Definitions
 
 TypeScript wird die von uns erstellen TS-Dateien zwar transpilieren, jedoch erscheint ein Fehler, dass Angular nicht gefunden werden kann (`TS: Error: Cannot find module 'angular2/angular2'`). 
 
