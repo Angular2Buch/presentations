@@ -1,7 +1,10 @@
-# Presentation
+# Content
 
 * [book-rating](https://angular2buch.de/presentations/book-rating/)  
   how to create a simple book ranking app with angular2
+
+* [handout](handout) - Deutschsprachiges Handout
+  [PDF Version](https://angular2buch.de/presentations/handout/handout_angular2.pdf) zum Download
 
 
 ## Building Presentation 
