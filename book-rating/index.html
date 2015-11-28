@@ -66,21 +66,6 @@
                     <small><a href="http://woiwode.info/" target="_blank">Gregor Woiwode</a> / <a href="http://twitter.com/GregOnNet" target="_blank">@GregOnNet</a></small>
                 </section>
 
-                <section data-markdown class="hidePrint">
-                    <script type="text/template">
-                      <i class="ion ion-videocamera" style="font-size:6em;"></i>
-
-                      <small style="text-align: justify; width: 60%">
-                          Du erklärst dich ausdrücklich einverstanden, dass von dieser Session Ton- oder Bildaufnahmen gemacht werden,
-                          die durch die Vortragenden weltweit verbreitet und veröffentlicht werden können. Eine Vergütung dafür ist nicht geschuldet.
-                      </small>
-                      <br><br>
-                      <small>
-                          <strong>Andernfalls widersprichst du jetzt unverzüglich.</strong>
-                      </small>
-                    </script>
-                </section>
-
                 <section data-markdown>
                     <script type="text/template">
                       <i class="fa fa-info" style="font-size:6em;color:#4D769A;"></i>
@@ -115,6 +100,7 @@
                         $ tsd install angular2/ es6-shim
                         $ tsc --watch
                         ```
+                        ... oder Atom
                     </section>
 
                     <section data-markdown>
@@ -151,8 +137,12 @@
                             ## index.html
                             <small>SystemJS lädt app</small>
 
-                            ```html|data-show-source=../book-rating-app/index.html
-                            loading...
+                            ```html|data-show-source=./samples/index.html
+                            <h1>
+                              <img src="img/angular2-logo.svg"> Book rating
+                            </h1>
+
+                            <book-rating></book-rating>
                             ```
                         </script>
                     </section>
@@ -174,7 +164,7 @@
                             ## Laden der App
                             <small>bootstrap der ersten Start-Komponente</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=../book-rating-app/app.ts
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/app.ts
                             loading...
                             ```
                         </script>
@@ -204,7 +194,7 @@
                             ## Bücher-Klasse
                             <small>TypeScript-Typen verwenden</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=../book-rating-app/models/book.ts
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/models/book.ts
                             loading...
                             ```
                         </script>
@@ -359,7 +349,7 @@
 
                 <section>
                     <div class="device-preview" style="overflow: hidden;">
-                        <iframe class="device-screen" src="../book-rating-app/index.html"></iframe>
+                        <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
                     </div>
                 </section>
 
