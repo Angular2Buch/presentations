@@ -347,6 +347,70 @@
                     </section>
                 </section>
 
+                <section data-state="karma">
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        <div style="margin-left:240px;text-align:left"><strong>Unit Tests mit</strong></div>
+                        ![Karma Logo](img/logo-karma.svg) <!-- .element: width="50%" -->
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Jasmine
+                            <small>Tests im BDD-Style</small>
+
+                            ```typescript|contenteditable|spellcheck=false
+                            describe("A suite", function() {
+                              it("contains spec with an expectation", function() {
+                                expect(true).toBe(true);
+                              });
+                            });
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## angular2/testing
+                            <small>import {} verwenden!</small>
+
+                            ```typescript|contenteditable|spellcheck=false
+                            import {
+                                it, 
+                                describe, 
+                                expect,
+                                inject,
+                                beforeEachProviders
+                            } from 'angular2/testing';
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Spec
+
+                            ```typescript|contenteditable|small|spellcheck=false
+                            import { it, describe, expect, inject, beforeEachProviders } from 'angular2/testing';
+                            import BookRating from '../../app/components/book-rating';
+
+                            describe('BookRating component', () => {
+                              beforeEachProviders(() => [BookRating]);
+
+                              it('should have a predefined list of 2 books', inject([BookRating], (bookRating: BookRating) => {
+                                expect(bookRating.books.length).toBe(2);
+                              }));
+                            });
+                            ```
+                        </script>
+                    </section>
+                    
+
+                    
+                </section>                
+                
                 <section>
                     <div class="device-preview" style="overflow: hidden;">
                         <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>

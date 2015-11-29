@@ -230,9 +230,9 @@ body {
 .reveal a {
   color: #0273D4;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
   color: #013c6f;
@@ -253,9 +253,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -581,6 +581,16 @@ ul.model {
   transition: background-image 0.8s linear; }
   .typescript .reveal h1, .typescript .reveal h2, .typescript .reveal h3, .typescript .reveal h4, .typescript .reveal strong, .typescript .reveal i {
     color: #007ACC !important; }
+
+.karma .reveal {
+  background-image: url("../../img/logo-karma-state.svg");
+  background-position: 10px 10px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
+    color: #429f87 !important; }
 
 .ng-shield {
   margin: auto;

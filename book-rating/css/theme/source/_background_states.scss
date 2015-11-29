@@ -30,6 +30,16 @@
     }
 }
 
+.karma {
+    .reveal {
+        background-image: url('../../img/logo-karma-state.svg');
+        background-position: 10px 10px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(#429f87);
+    }
+}
+
 .ng-shield {
     margin: auto;
     width: 353px;
