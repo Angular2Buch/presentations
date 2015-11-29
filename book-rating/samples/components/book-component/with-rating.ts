@@ -1,5 +1,5 @@
 // book-component.ts
-import { Component, View } from 'angular2/angular2';
+import { Component, View, Input } from 'angular2/angular2';
 import Book from '../models/book';
 
 @Component({ /* ... */ })
@@ -14,7 +14,7 @@ import Book from '../models/book';
   `
 })
 export default class BookComponent {
-  book: Book;
+  @Input() book: Book;
 
   rateUp() {
     this.book.rating++;

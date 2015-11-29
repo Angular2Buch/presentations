@@ -1,10 +1,9 @@
 // book-component.ts
-import { Component, View } from 'angular2/angular2';
+import { Component, View, Input } from 'angular2/angular2';
 import Book from '../models/book';
 
 @Component({
-  selector: 'book',
-  inputs: ['book'] // <-- input!
+  selector: 'book'
 })
 @View({
   template: `
@@ -19,5 +18,5 @@ import Book from '../models/book';
   `
 })
 export default class BookComponent {
-  book: Book;
+  @Input() book: Book;
 }
