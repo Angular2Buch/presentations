@@ -474,6 +474,8 @@ ul.model {
       animation: 1s blink step-end infinite; }
     .reveal pre code.cmd.white span.keyword {
       color: #e2e2e2 !important; }
+  .reveal pre code.cmd.small {
+    font-size: 0.9em; }
 
 @keyframes "blink" {
   from, to {

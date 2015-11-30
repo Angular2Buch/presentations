@@ -179,6 +179,10 @@ ul.model {
             color: #e2e2e2 !important;
         }
     }
+    
+    &.cmd.small {
+        font-size: 0.9em
+    }
 }
 
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }
