@@ -475,7 +475,7 @@ ul.model {
     .reveal pre code.cmd.white span.keyword {
       color: #e2e2e2 !important; }
   .reveal pre code.cmd.small {
-    font-size: 0.9em !important; }
+    font-size: 0.85em !important; }
 
 @keyframes "blink" {
   from, to {
