@@ -607,6 +607,16 @@ ul.model {
 .ng-shield-fix-shield::before {
   margin-left: 16px; }
 
+.github .reveal {
+  background-image: none; }
+  .github .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+  .github .reveal::before {
+    line-height: 1.2em; }
+
 .star .reveal {
   background-image: none; }
   .star .reveal::before {

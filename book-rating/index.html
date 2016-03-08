@@ -76,6 +76,48 @@
                     </script>
                 </section>
 
+                <section data-state="typescript">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ![TypeScript Logo](img/typescript-logo.svg) <!-- .element: width="50%" -->
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Setup
+
+                            ```ruby|cmd
+                            $ npm install -g typescript@1.8.7 typings@0.7.3 
+                            $ typings install es6-shim --ambient --save
+                            $ tsc --watch
+                            ```
+                            <small>
+                            * ... oder [Angular-CLI](https://github.com/angular/angular-cli)
+                            * ... und/oder Atom mit [atom-typescript](https://atom.io/packages/atom-typescript)
+                            </small>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        ## Klassen
+
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/book.ts
+                        loading...
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        ## Module
+
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/imports.ts
+                        loading...
+                        ```
+                    </section>
+
+                </section>
+
                 <section data-state="github">    
 
                     <section data-markdown>
@@ -97,54 +139,23 @@
                             # <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
 
                             ```ruby|cmd|small
-                            $ npm install -g angular-cli
+                            $ npm install -g angular-cli@0.0.24
+                            $ ng help
                             $ ng new BookRating
                             $ cd BookRating
-                            $ ng serve
+                            $ npm start
                             ```
                         </script>
                     </section>
                 </section>
 
 
-                <section data-state="typescript">
-
-                    <section data-markdown>
-                        <script type="text/template">
-                        ![TypeScript Logo](img/typescript-logo.svg) <!-- .element: width="50%" -->
-                      </script>
-                    </section>
-
-                    <section data-markdown>
-                        ## Setup
-
-                        ```ruby|cmd
-                        $ npm install -g typescript tsd
-                        $ tsd install angular2/ es6-shim
-                        $ tsc --watch
-                        ```
-                        ... oder Atom
-                    </section>
-
-                    <section data-markdown>
-                        ## Klassen
-
-                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/book.ts
-                        loading...
-                        ```
-                    </section>
-
-                    <section data-markdown>
-                        ## Module
-
-                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/imports.ts
-                        loading...
-                        ```
-                    </section>
-
-                </section>
 
 
+                <!--
+                npm install bootstrap@3.3.6 --save
+                
+                --->
 
                 <section data-state="star">
 
@@ -436,18 +447,17 @@
                 
                 <section>
                     <div class="device-preview" style="overflow: hidden;">
-                        <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
+                        <XXiframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
                     </div>
                 </section>
 
                 <section data-markdown>
                     <script type="text/template">
                         # <i class="ion ion-happy-outline" style="font-size:4em;"></i>
-                        ## Wir sind happy
+                        ## Vielen Dank!
                         <small>
                             Slides: <a href="https://angular2buch.de/presentations/book-rating/" target="_blank">bit.do/dos-angular2</a><br>
                             Demo: <a href="https://github.com/Angular2Buch/angular-2-book-rating-app/" target="_blank">bit.do/dos-angular2-demo</a><br><br>
-                            <p>Danke, wir freuen uns auf eure Anregungen!</p>
                         </small>
                     </script>
                 </section>

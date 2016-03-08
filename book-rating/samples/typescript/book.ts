@@ -3,7 +3,8 @@ class Book {
   comment: string;
   rating: number = 0;
 
-  constructor(title, comment) {
+  // TODO: constructor shorthand
+  constructor(title: string, comment: string) {
     this.title = title;
     this.comment = comment;
   }

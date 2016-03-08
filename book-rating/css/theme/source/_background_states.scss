@@ -68,6 +68,16 @@
     }
 }
 
+.github {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f09b")
+        &::before {
+            line-height: 1.2em;
+        }
+    }
+}
+
 .star {
     .reveal {
         background-image: none;
