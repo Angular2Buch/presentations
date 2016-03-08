@@ -1,5 +1,5 @@
 // app.ts
-import { bootstrap } from 'angular2/angular2';
-import BookRating from './components/book-rating';
+import {bootstrap} from 'angular2/platform/browser';
+import {BookRatingApp} from './app/book-rating';
 
-bootstrap(BookRating);
+bootstrap(BookRatingApp);

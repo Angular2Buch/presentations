@@ -2,9 +2,15 @@
   <img src="./img/angular2-logo.svg"> Book rating
 </h1>
 
-<book-rating></book-rating>
+<book-rating-app>Loading...</book-rating-app>
+
+<script src="vendor/es6-shim/es6-shim.js"></script>
+[... +more polyfills]
+
+<script src="vendor/angular2/bundles/angular2.dev.js"></script>
+[... +more bundles]
 
 <script>
-  System.config({ packages: { 'app': { }}});
-  System.import('./app/app')
+  System.config({ packages: { app: { }}});
+  System.import('app.js').then(null, console.error.bind(console));
 </script>
