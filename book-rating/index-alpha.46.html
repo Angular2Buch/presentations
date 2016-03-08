@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Einführung in Angular 2.0</title>
+
+        <meta name="description" content="Angular 2.0 - Einführung und Schnellstart">
+        <meta name="author" content="Johannes Hoppe, Danny Koppenhagen, Ferdinand Malcher, Gregor Woiwode">
+
+        <link rel="shortcut icon" href="img/favicon.ico" >
+        <meta property="og:image" content="https://angular2buch.de/presentations/book-rating/img/thumbnail.png" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/neutral.css" id="theme">
+        <link rel="stylesheet" href="lib/font/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="lib/font/ionicons/css/ionicons.min.css" />
+
+        <!-- Code syntax highlighting -->
+        <link href="lib/css/github.css" rel="stylesheet" />
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+
+                    <img data-src="img/angular2-logo.svg" width="30%"></img>
+
+                    <h1 style="font-size: 2.5em; line-height: 1.3em;">Angular 2.0</h1>
+                    <h3 style="font-size: 0.8em;">Einführung &amp; Schnellstart</h3>
+
+                    <br class="hidePrint" />
+                    <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
+
+
+                </section>
+
+                <section>
+                    <small><a href="http://haushoppe-its.de/" target="_blank">Johannes Hoppe</a> / <a href="http://twitter.com/JohannesHoppe" target="_blank">@JohannesHoppe</a></small><br>
+                    <small><a href="http://d-koppenhagen.de" target="_blank">Danny Koppenhagen</a> / <a href="http://twitter.com/d_koppenhagen" target="_blank">@d_koppenhagen</a></small><br>
+                    <small><a href="http://ferdinand-malcher.de/" target="_blank">Ferdinand Malcher</a> / <a href="http://twitter.com/fmalcher01" target="_blank">@fmalcher01</a></small><br>
+                    <small><a href="http://woiwode.info/" target="_blank">Gregor Woiwode</a> / <a href="http://twitter.com/GregOnNet" target="_blank">@GregOnNet</a></small>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                      <i class="fa fa-info" style="font-size:6em;color:#4D769A;"></i>
+
+                      Alle gezeigten Beispiele basieren auf<br>
+                      einer Alpha-Version von Angular 2.0.<br>
+                      Vieles davon kann sich noch ändern.
+                    </script>
+                </section>
+
+                <section data-state="github">    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-github "></i>
+                            ## Angular Seed
+                            <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
+                        </script>
+                    </section>
+                
+                    <section data-markdown>
+                        ## Was wir bauen wollen
+
+                        ![](img/app.png)
+                    </section>
+                
+                    <section data-markdown>
+                        <script type="text/template">
+                            # <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
+
+                            ```ruby|cmd|small
+                            $ git clone https://github.com/Angular2Buch/angular-2-book-rating-app.git
+                            $ cd angular-2-book-rating-app
+                            $ npm install  #oder: npm install --production
+                            $ npm run tsc
+                            $ npm start
+                            ```
+                        </script>
+                    </section>
+                </section>
+
+
+                <section data-state="typescript">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ![TypeScript Logo](img/typescript-logo.svg) <!-- .element: width="50%" -->
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                        ## Setup
+
+                        ```ruby|cmd
+                        $ npm install -g typescript tsd
+                        $ tsd install angular2/ es6-shim
+                        $ tsc --watch
+                        ```
+                        ... oder Atom
+                    </section>
+
+                    <section data-markdown>
+                        ## Klassen
+
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/book.ts
+                        loading...
+                        ```
+                    </section>
+
+                    <section data-markdown>
+                        ## Module
+
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/typescript/imports.ts
+                        loading...
+                        ```
+                    </section>
+
+                </section>
+
+
+
+                <section data-state="star">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-star-o"></i>
+                            ## Bootstrapping
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## index.html
+                            <small>SystemJS lädt app</small>
+
+                            ```html|data-show-source=./samples/index.html
+                            <h1>
+                              <img src="img/angular2-logo.svg"> Book rating
+                            </h1>
+
+                            <book-rating></book-rating>
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## BookRating
+                            <small>__Komponente__ soll zunächst nur ein `Array<string>` darstellen</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts
+                            loading...
+                            ```
+                            <small>Neu: Dekoratoren</small>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Laden der App
+                            <small>bootstrap der ersten Start-Komponente</small>
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/app.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        # <i class="ion ion-happy-outline" style="font-size:4em;"></i>
+                        ## It works!
+                        <small>On my machine! &trade;</small>
+                    </script>
+                </section>
+
+                <section data-state="code">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-code"></i>
+                            ## Components &amp; Views
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Bücher-Klasse
+                            <small>TypeScript-Typen verwenden</small>
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/models/book.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## BookComponent
+                            <small>__Komponente__ soll ein einzelnes Buch anzeigen</small>
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-input.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Template Binding
+                            <small>Interpolation: Daten können via __`{{ }}`__ gebunden werden</small>
+
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/template-binding.html
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## BookRating
+                            <small>__Komponente__ soll zunächst nur ein einziges Buch anzeigen</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-mini.ts
+                            loading...
+                            ```
+                            <small>__BookRating __ importiert __BookComponent__</small>
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## [Property bindings]
+                            <small>Ziel: __inputs__ der gebundenen Komponente<br>
+                            Property bindings sind durch __`[]`__ gekennzeichnet</small>
+                            <br>
+
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/property-binding.html
+                            loading...
+                            ```
+
+                        </script>
+                    </section>
+                </section>
+
+                <section data-state="forms">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-check-square-o ng-shield-fix-shield"></i>
+                            ## Forms
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Formular
+                            <small>__BookRating__ erhält zusätzliche Interaktionselemente</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-@view.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Referenzvariablen
+                            <small>Mit einer __#__ kann man eine Referenz initialisieren</small>
+
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/reference-variables.html
+                            loading...
+                            ```
+                            <small>Vergleichbar mit `ng-model` aus AngularJS 1.x</small>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## (Event Binding)
+                            <small>Event bindings sind durch __`()`__ gekennzeichnet</small>
+
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/event-binding.html
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Interaktion
+                            <small>Klassen sind die neuen Controller</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-class.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                </section>
+
+                <section data-state="refresh">
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-refresh"></i>
+                            ## Data Flow
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Interne Ereignisse
+                            <small>Bücher bewerten</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-rating.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Externe Ereignisse
+                            <small>Sender: __outputs__ senden Event aus Komponente heraus</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-output-binding.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Auf Event reagieren
+                            <small>Empfänger: __(event binding)__</small>
+
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-subscribe-to-event.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+                </section>
+
+                <section data-state="karma">
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        <div style="margin-left:240px;text-align:left"><strong>Unit Tests mit</strong></div>
+                        ![Karma Logo](img/logo-karma.svg) <!-- .element: width="50%" -->
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Jasmine
+                            <small>Tests im BDD-Style</small>
+
+                            ```typescript|contenteditable|spellcheck=false
+                            describe("A suite", function() {
+                              it("contains spec with an expectation", function() {
+                                expect(true).toBe(true);
+                              });
+                            });
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## angular2/testing
+                            <small>import {} verwenden!</small>
+
+                            ```typescript|contenteditable|spellcheck=false
+                            import {
+                                it, 
+                                describe, 
+                                expect,
+                                inject,
+                                beforeEachProviders
+                            } from 'angular2/testing';
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Spec
+
+                            ```typescript|contenteditable|small|spellcheck=false
+                            import { it, describe, expect, inject, beforeEachProviders } from 'angular2/testing';
+                            import BookRating from '../../app/components/book-rating';
+
+                            describe('BookRating component', () => {
+                              beforeEachProviders(() => [BookRating]);
+
+                              it('should have a predefined list of 2 books', inject([BookRating], (bookRating: BookRating) => {
+                                expect(bookRating.books.length).toBe(2);
+                              }));
+                            });
+                            ```
+                        </script>
+                    </section>
+                    
+
+                    
+                </section>                
+                
+                <section>
+                    <div class="device-preview" style="overflow: hidden;">
+                        <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
+                    </div>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        # <i class="ion ion-happy-outline" style="font-size:4em;"></i>
+                        ## Wir sind happy
+                        <small>
+                            Slides: <a href="https://angular2buch.de/presentations/book-rating/" target="_blank">bit.do/dos-angular2</a><br>
+                            Demo: <a href="https://github.com/Angular2Buch/angular-2-book-rating-app/" target="_blank">bit.do/dos-angular2-demo</a><br><br>
+                            <p>Danke, wir freuen uns auf eure Anregungen!</p>
+                        </small>
+                    </script>
+                </section>
+
+
+            </div>
+
+        </div>
+
+        <div class="pesentation-details hidePrint">
+            <p>
+                @JohannesHoppe, @d_koppenhagen, @fmalcher01, @GregOnNet
+                <span >| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+            </p>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                minScale: 0.2,
+                maxScale: 1.0,
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    // own:
+                    { src: 'plugin/showSource/jqlite.min.js' },
+                    { src: 'plugin/showSource/http.min.js' },
+                    { src: 'plugin/showSource/enhanceCodeBlocks.js' },
+                    { src: 'plugin/showSource/showSource.js' }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
