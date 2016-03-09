@@ -1,18 +1,16 @@
-// book-rating.ts
-import {Component, View} from 'angular2/angular2';
+// dashboard.ts
+import {Component} from 'angular2/core';
 
 @Component({
-  selector: 'book-rating'
-})
-@View({
-  directives: [], // later: BookComponent, NgFor
+  selector: 'dashboard',
+  directives: [], // later: BookComponent
   template: `
     <h1>Bücher</h1>
     <p>{{ books }}</p>
    `
 })
-export default class BookRating {
-  books: Array<string>;
+export class Dashboard {
+  books: string[];
 
   constructor() {
     this.books = ['Angular 2', 'Aurelia'];
