@@ -216,21 +216,21 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## BookRating
+                            ## Dashboard
                             <small>erste Komponente generieren lassen</small>
 
                             ```ruby|cmd
-                            $ ng generate component BookRating
+                            $ ng generate component Dashboard
                             ```
                         </script>
                     </section>                    
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ## BookRating
+                            ## Dashboard
                             <small>__Komponente__ soll zunächst nur ein `string[]` darstellen</small>
 
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/dashboard/dashboard-start.ts
                             loading...
                             ```
                         </script>
@@ -283,7 +283,7 @@
                             ## Template Binding
                             <small>Interpolation: Daten können via __`{{ }}`__ gebunden werden</small>
 
-                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/template-binding.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/dashboard/template-binding.html
                             loading...
                             ```
                         </script>
@@ -291,13 +291,13 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## BookRating
+                            ## Dashboard
                             <small>__Komponente__ soll zunächst nur ein einziges Buch anzeigen</small>
 
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-mini.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/dashboard/dashboard-mini.ts
                             loading...
                             ```
-                            <small>__BookRating __ importiert __BookComponent__</small>
+                            <small>__Dashboard __ importiert __BookComponent__</small>
                       </script>
                     </section>
 
@@ -308,7 +308,7 @@
                             Property bindings sind durch __`[]`__ gekennzeichnet</small>
                             <br>
 
-                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/property-binding.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/dashboard/property-binding.html
                             loading...
                             ```
 
@@ -328,9 +328,9 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Formular
-                            <small>__BookRating__ erhält zusätzliche Interaktionselemente</small>
+                            <small>__Dashboard__ erhält zusätzliche Interaktionselemente</small>
 
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-@view.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/dashboard/dashboard-@view.ts
                             loading...
                             ```
                         </script>
@@ -341,7 +341,7 @@
                             ## Referenzvariablen
                             <small>Mit einer __#__ kann man eine Referenz initialisieren</small>
 
-                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/reference-variables.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/dashboard/reference-variables.html
                             loading...
                             ```
                             <small>Vergleichbar mit `ng-model` aus AngularJS 1.x</small>
@@ -353,7 +353,7 @@
                             ## (Event Binding)
                             <small>Event bindings sind durch __`()`__ gekennzeichnet</small>
 
-                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/book-rating/event-binding.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/dashboard/event-binding.html
                             loading...
                             ```
                         </script>
@@ -364,7 +364,7 @@
                             ## Interaktion
                             <small>Klassen sind die neuen Controller</small>
 
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-class.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/dashboard/dashboard-class.ts
                             loading...
                             ```
                         </script>
@@ -408,7 +408,7 @@
                             ## Auf Event reagieren
                             <small>Empfänger: __(event binding)__</small>
 
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-subscribe-to-event.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/dashboard/dashboard-subscribe-to-event.ts
                             loading...
                             ```
                         </script>
@@ -462,13 +462,13 @@
 
                             ```typescript|contenteditable|small|spellcheck=false
                             import { it, describe, expect, inject, beforeEachProviders } from 'angular2/testing';
-                            import BookRating from '../../app/components/book-rating';
+                            import Dashboard from '../../app/components/dashboard';
 
-                            describe('BookRating component', () => {
-                              beforeEachProviders(() => [BookRating]);
+                            describe('Dashboard component', () => {
+                              beforeEachProviders(() => [Dashboard]);
 
-                              it('should have a predefined list of 2 books', inject([BookRating], (bookRating: BookRating) => {
-                                expect(bookRating.books.length).toBe(2);
+                              it('should have a predefined list of 2 books', inject([Dashboard], (dashboard: Dashboard) => {
+                                expect(dashboard.books.length).toBe(2);
                               }));
                             });
                             ```
