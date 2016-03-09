@@ -1,6 +1,7 @@
-// book-rating.ts
-@View({
-  directives: [BookComponent, NgFor],
+// dashboard.ts
+@Component({
+  selector: 'dashboard',
+  directives: [BookComponent],
   template: `
      <div class="form">
        <div class="form-group">
@@ -17,6 +18,6 @@
      </div>
 
      <hr>
-     <book *ng-for="#book of books" [book]="book"></book>
-   `
+     <book *ngFor="#book of books" [book]="book"></book>`
 })
+/* [...] */

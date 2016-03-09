@@ -1,11 +1,10 @@
-// book-rating.ts
-export default class BookRating {
-  books: Array<Book>;
+// dashboard.ts
+/* [...] */
+export class Dashboard {
+  books: Book[];
 
   constructor() {
-    this.books = [
-      new Book('Angular 2', 'Eine praktische Einführung')
-    ];
+    this.books = [new Book('Angular 2', 'Eine praktische Einführung')];
   }
 
   add(title, comment) {
@@ -15,3 +14,4 @@ export default class BookRating {
     title.value = '';
     comment.value = '';
   }
+}

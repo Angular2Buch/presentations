@@ -11,7 +11,7 @@ import {BookComponent} from '../book-component/book-component';
     <book [book]="book"></book>`
 })
 export class Dashboard {
-  book: Book;
+  book: Book; // TODO books: Book[];
 
   constructor() {
     this.book = new Book('Angular 2', 'Eine praktische Einführung');
