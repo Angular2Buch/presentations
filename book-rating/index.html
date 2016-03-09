@@ -182,8 +182,8 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ## bootstrap != [Bootstrap](http://getbootstrap.com)
-                            <small>CSS-Framework boostrap hinzufügen</small>
+                            ### bootstrap() != <a href="http://getbootstrap.com"><img src="img/bootstrap-logo.png" alt="Bootstrap Logo" style="margin:0; line-height: 0; margin-bottom: -6px;"></a>
+                            <small>Framework Bootstrap hinzufügen</small>
 
                             ```ruby|cmd
                             $ npm install bootstrap@3.3.6 --save
@@ -217,12 +217,22 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## BookRating
-                            <small>__Komponente__ soll zunächst nur ein `Array<string>` darstellen</small>
+                            <small>erste Komponente generieren lassen</small>
+
+                            ```ruby|cmd
+                            $ ng generate component BookRating
+                            ```
+                        </script>
+                    </section>                    
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## BookRating
+                            <small>__Komponente__ soll zunächst nur ein `string[]` darstellen</small>
 
                             ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-rating/book-rating-start.ts
                             loading...
                             ```
-                            <small>Neu: Dekoratoren</small>
                         </script>
                     </section>
 
