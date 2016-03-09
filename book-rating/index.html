@@ -149,14 +149,6 @@
                     </section>
                 </section>
 
-
-
-
-                <!--
-                npm install bootstrap@3.3.6 --save
-                
-                --->
-
                 <section data-state="star">
 
                     <section data-markdown>
@@ -171,7 +163,52 @@
                             ## index.html
                             <small>SystemJS lädt app</small>
 
-                            ```html|contenteditable|spellcheck=false|small|data-show-source=./samples/index.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/index.html
+                            loading...
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Laden der App
+                            <small>bootstrap der Root-Component</small>
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/app.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## bootstrap != [Bootstrap](http://getbootstrap.com)
+                            <small>CSS-Framework boostrap hinzufügen</small>
+
+                            ```ruby|cmd
+                            $ npm install bootstrap@3.3.6 --save
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ![Broccoli Logo](img/broccoli-logo.png) <!-- .element: width="20%" -->
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/ember-cli-build.js
+                            loading...
+                            ```
+                            
+                            <small>broccoli: asset pipeline anpassen</small>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## index.html
+                            <small>mit Bootstrap-Framework</small>
+
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/index_bootstrapped.html
                             loading...
                             ```
                         </script>
@@ -189,16 +226,7 @@
                         </script>
                     </section>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Laden der App
-                            <small>bootstrap der ersten Start-Komponente</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/app.ts
-                            loading...
-                            ```
-                        </script>
-                    </section>
 
                 </section>
 
