@@ -468,7 +468,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## angular2/testing
-                            <small>import {} verwenden!</small>
+                            <small>immer die gepatchten Test-Methoden verwenden!</small>
 
                             ```typescript|contenteditable|spellcheck=false
                             import {
@@ -482,6 +482,58 @@
                         </script>
                     </section>
                     
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Los geht's
+
+                            ```ruby|cmd
+                            $ ng test --watch
+                            ```
+                        </script>
+                    </section>                    
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Spec
+                            <small>generierter Code zum Testen einer Komponente</small>
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/book-component.orig.spec.ts
+                            loading...
+                            ```
+                        </script>
+                    </section> 
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            <h1 style="position:absolute;top: -143px; right: -100px; font-size: 11em; color: silver !important">?!</h1>
+                            <br>
+                            ## etwas aufräumen &nbsp; &nbsp; &nbsp; &nbsp;
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## beforeEach
+                            <small>aufgeräumter Code zum Testen einer Komponente</small>
+
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/book-component.cleanup.spec.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Komponenten
+                            <small>__Fortgeschrittener Test:__ Initialisierte Komponente und Spy</small>
+
+                            ```typescript|contenteditable|small|spellcheck=false|data-show-source=./samples/specs/book-component.TestComponentBuilder.spec.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>
+                    
+                    <!--
                     <section data-markdown>
                         <script type="text/template">
                             ## Spec
@@ -500,6 +552,7 @@
                             ```
                         </script>
                     </section>
+                    -->
                     
 
                     

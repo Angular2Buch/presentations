@@ -12,11 +12,18 @@
     var startSnip = "<!--START-->";
     var stopSnip = "<!--STOP-->";
 
+    var startSnip2 = "//START";
+    var stopSnip2 = "//STOP";
+
     var extractSnippet = function(data) {
         var match = data.match(startSnip + "([^]*?)" + stopSnip);
-
         if (match !== null) {
             return match[1].trim();
+        }
+
+        var match2 = data.match(startSnip2 + "([^]*?)" + stopSnip2);
+        if (match2 !== null) {
+            return match2[1].trim();
         }
 
         // fallback, if no snippet was placed
