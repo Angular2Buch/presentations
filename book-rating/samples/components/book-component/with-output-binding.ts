@@ -1,12 +1,8 @@
 // book-component.ts
-import { Component, View, EventEmitter } from 'angular2/angular2';
-import { Input, Output } from 'angular2/angular2';
-import Book from '../models/book';
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Book} from '../../models/book';
 
 @Component({
-  /* ... */
-})
-@View({
   /* ... */
 })
 export default class BookComponent {
@@ -15,11 +11,11 @@ export default class BookComponent {
 
   rateUp() {
     this.book.rating++;
-    this.rated.next(this.book);
+    this.rated.emit(this.book);
   }
 
   rateDown() {
     this.book.rating--;
-    this.rated.next(this.book);
+    this.rated.emit(this.book);
   }
 }
