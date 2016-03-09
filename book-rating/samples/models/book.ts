@@ -1,11 +1,6 @@
 // book.ts
-export default class Book {
-  title: string;
-  comment: string;
+export class Book {
   rating: number = 0;
 
-  constructor(title, comment) {
-    this.title = title;
-    this.comment = comment;
-  }
+  constructor(public title: string, public comment: string) { }
 }

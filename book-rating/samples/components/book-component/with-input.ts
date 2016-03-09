@@ -1,11 +1,9 @@
 // book-component.ts
-import { Component, View, Input } from 'angular2/angular2';
-import Book from '../models/book';
+import {Component, Input} from 'angular2/core';
+import {Book} from '../../models/book';
 
 @Component({
-  selector: 'book'
-})
-@View({
+  selector: 'book',
   template: `
     <div class="well">
       <div class="thumbnail pull-right">
@@ -13,10 +11,8 @@ import Book from '../models/book';
       </div>
       <h2>__TITEL__ <small>Stars __BEWERTUNG__</small></h2>
       <p>__KOMMENTAR__</p>
-
-    </div>
-  `
+    </div>`
 })
-export default class BookComponent {
+export class BookComponent {
   @Input() book: Book;
 }

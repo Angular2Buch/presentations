@@ -1,20 +1,16 @@
-// book-rating.ts
-import {Component, View, NgFor} from 'angular2/angular2';
-import Book from '../models/book';
-import BookComponent from './book-component';
+// dashboard.ts
+import {Component} from 'angular2/core';
+import {Book} from '../../models/book';
+import {BookComponent} from '../book-component/book-component';
 
 @Component({
-  selector: 'book-rating'
-})
-@View({
-  directives: [BookComponent, NgFor],
+  selector: 'dashboard',
+  directives: [BookComponent],
   template: `
-     <h1>Buch</h1>
-     <book [book]="book"></book>
-   `
+    <h1>Buch</h1>
+    <book [book]="book"></book>`
 })
-export default class BookRating {
-  //books: Array<Book>;
+export class Dashboard {
   book: Book;
 
   constructor() {

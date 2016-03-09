@@ -6,8 +6,7 @@ import {Component} from 'angular2/core';
   directives: [], // later: BookComponent
   template: `
     <h1>Bücher</h1>
-    <p>{{ books }}</p>
-   `
+    <p>{{ books }}</p>`
 })
 export class Dashboard {
   books: string[];
