@@ -1,4 +1,5 @@
 // dashboard.ts
+
 /* [...] */
 export class Dashboard {
   books: Book[];
