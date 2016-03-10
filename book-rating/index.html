@@ -490,7 +490,18 @@
                             $ ng test --watch
                             ```
                         </script>
-                    </section>                    
+                    </section>   
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Spec
+                            <small>Simpler Test der __Klasse__ `BookComponent`</small>
+
+                            ```typescript|contenteditable|small|spellcheck=false|data-show-source=./samples/specs/book-component.class.spec.ts
+                            loading...
+                            ```
+                        </script>
+                    </section>                 
                     
                     <section data-markdown>
                         <script type="text/template">
@@ -524,7 +535,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ## Komponenten
+                            ## Spec
                             <small>__Fortgeschrittener Test:__ Initialisierte Komponente und Spy</small>
 
                             ```typescript|contenteditable|small|spellcheck=false|data-show-source=./samples/specs/book-component.TestComponentBuilder.spec.ts
@@ -532,35 +543,11 @@
                             ```
                         </script>
                     </section>
-                    
-                    <!--
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Spec
-
-                            ```typescript|contenteditable|small|spellcheck=false
-                            import { it, describe, expect, inject, beforeEachProviders } from 'angular2/testing';
-                            import Dashboard from '../../app/components/dashboard';
-
-                            describe('Dashboard component', () => {
-                              beforeEachProviders(() => [Dashboard]);
-
-                              it('should have a predefined list of 2 books', inject([Dashboard], (dashboard: Dashboard) => {
-                                expect(dashboard.books.length).toBe(2);
-                              }));
-                            });
-                            ```
-                        </script>
-                    </section>
-                    -->
-                    
-
-                    
                 </section>                
                 
                 <section>
                     <div class="device-preview" style="overflow: hidden;">
-                        <XXiframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
+                        <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
                     </div>
                 </section>
 
