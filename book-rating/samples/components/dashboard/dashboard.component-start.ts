@@ -13,6 +13,6 @@ export class DashboardComponent implements OnInit {
   constructor(){}
 
   ngOnInit() {
-    this.books = ['Angular 2', 'Aurelia'];
+    this.books = ['Angular 2', 'Angular JS 1'];
   }
 }
