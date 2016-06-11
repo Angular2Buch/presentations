@@ -1,12 +1,11 @@
-<book-rating-app>Loading...</book-rating-app>
+<app-root>Loading...</app-root>
 
-<script src="vendor/es6-shim/es6-shim.js"></script>
-[... + more polyfills]
-
-<script src="vendor/angular2/bundles/angular2.dev.js"></script>
-[... + more bundles]
+{{#each scripts.polyfills}}
+<script src="{{.}}"></script>
+{{/each}}
 
 <script>
-  System.config({ packages: { app: { }}});
-  System.import('app.js').then(null, console.error.bind(console));
+  System.import('system-config.js').then(function () {
+    System.import('main');
+  }).catch(console.error.bind(console));
 </script>

@@ -60,12 +60,12 @@
                 </section>
 
                 <section data-state="prequel">
-                
+
                   <section>
                     <div class="books">
                       <div class="book">
                         <a href="http://www.amazon.de/dp/3864903572" target="_blank">
-                            <img src="img/buch.jpg" width="40%" 
+                            <img src="img/buch.jpg" width="40%"
                                 style="-webkit-box-shadow: 10px 10px 5px 0px rgba(196,196,196,1) !important;
                                         -moz-box-shadow: 10px 10px 5px 0px rgba(196,196,196,1) !important;
                                         box-shadow: 10px 10px 5px 0px rgba(196,196,196,1) !important;
@@ -73,9 +73,9 @@
                         </a>
                       </div>
                     </div>
-                
+
                     <br>
-                
+
                     <small>
                         <a href="http://haushoppe-its.de/" target="_blank">Johannes Hoppe</a> |
                         <a href="http://woiwode.info/" target="_blank">Gregor Woiwode</a> |
@@ -96,7 +96,7 @@
                     <section data-markdown>
                         ## Was wir bauen wollen
 
-                        ![](img/app.png)
+                        ![Screenshot BookRating App](img/app.png)
                     </section>
 
                 </section>
@@ -113,11 +113,11 @@
                         <script type="text/template">
                         ![TypeScript ES6/ES7](img/es5-es6-typescript.svg) <!-- .element: width="60%" style="xmargin-top: -100px" -->
                       </script>
-                    </section>                    
-                    
+                    </section>
+
                     <section data-markdown>
                         <script type="text/template">
-                            ## Setup
+                            ## TS Setup
 
                             ```ruby|cmd
                             $ npm install -g typescript typings
@@ -143,7 +143,7 @@
 
                 </section>
 
-                <section data-state="github">    
+                <section data-state="github">
 
                     <section data-markdown>
                         <script type="text/template">
@@ -153,7 +153,7 @@
                             <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
                         </script>
                     </section>
-                                
+
                     <section data-markdown>
                         <script type="text/template">
                             # <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
@@ -161,8 +161,8 @@
                             ```ruby|cmd|small
                             $ npm install -g angular-cli
                             $ ng help
-                            $ ng new BookRating
-                            $ cd BookRating
+                            $ ng new book-rating
+                            $ cd book-rating
                             $ npm start
                             ```
                         </script>
@@ -191,15 +191,15 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## Laden der App
-                            <small>bootstrap der Root-Component</small>
+                            ## Bootstrapping
+                            <small>Laden der Root-Component</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/app.ts
+                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/main.ts
                             loading...
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ### bootstrap() != <a href="http://getbootstrap.com"><img src="img/bootstrap-logo.png" alt="Bootstrap Logo" style="margin:0; line-height: 0; margin-bottom: -6px;"></a>
@@ -210,7 +210,7 @@
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ![Broccoli Logo](img/broccoli-logo.png) <!-- .element: width="20%" -->
@@ -218,11 +218,11 @@
                             ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/ember-cli-build.js
                             loading...
                             ```
-                            
+
                             <small>broccoli: asset pipeline anpassen</small>
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ## index.html
@@ -243,8 +243,8 @@
                             $ ng generate component Dashboard
                             ```
                         </script>
-                    </section>                    
-                    
+                    </section>
+
                     <section data-markdown>
                         <script type="text/template">
                             ## Dashboard
@@ -287,7 +287,7 @@
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ## BookComponent
@@ -298,7 +298,7 @@
                             ```
                         </script>
                         </script>
-                    </section>                    
+                    </section>
 
                     <section data-markdown>
                         <script type="text/template">
@@ -445,18 +445,18 @@
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             #### Zusammenfassung
-                            
+
                             ![Komonente](img/component.svg) <!-- .element: width="50%" -->
                         </script>
                     </section>
                 </section>
 
                 <section data-state="karma">
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                         <div style="margin-left:240px;text-align:left"><strong>Unit Tests mit</strong></div>
@@ -486,8 +486,8 @@
 
                             ```typescript|contenteditable|spellcheck=false
                             import {
-                                it, 
-                                describe, 
+                                it,
+                                describe,
                                 expect,
                                 inject,
                                 beforeEachProviders
@@ -495,7 +495,7 @@
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ## Los geht's
@@ -504,7 +504,7 @@
                             $ ng test --watch
                             ```
                         </script>
-                    </section>   
+                    </section>
 
                     <section data-markdown>
                         <script type="text/template">
@@ -515,8 +515,8 @@
                             loading...
                             ```
                         </script>
-                    </section>                 
-                    
+                    </section>
+
                     <section data-markdown>
                         <script type="text/template">
                             ## Spec
@@ -526,8 +526,8 @@
                             loading...
                             ```
                         </script>
-                    </section> 
-                    
+                    </section>
+
                     <section data-markdown>
                         <script type="text/template">
                             <h1 style="position:absolute;top: -143px; right: -100px; font-size: 11em; color: silver !important">?!</h1>
@@ -535,7 +535,7 @@
                             ## etwas aufräumen &nbsp; &nbsp; &nbsp; &nbsp;
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ## beforeEach
@@ -546,7 +546,7 @@
                             ```
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
                             ## Spec
@@ -557,8 +557,8 @@
                             ```
                         </script>
                     </section>
-                </section>                
-                
+                </section>
+
                 <section>
                     <div class="device-preview" style="overflow: hidden;">
                         <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/"></iframe>
@@ -573,8 +573,8 @@
                             Slides: <a href="https://angular2buch.de/presentations/book-rating/" target="_blank">bit.do/dos-angular2</a><br>
                             Demo: <a href="https://github.com/Angular2Buch/angular-2-book-rating-app/" target="_blank">bit.do/dos-angular2-demo</a><br><br>
                         </small>
-                        
-                        
+
+
                     </script>
                 </section>
 
