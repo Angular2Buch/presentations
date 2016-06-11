@@ -59,8 +59,9 @@
 
                 </section>
 
-                <section>
+                <section data-state="prequel">
                 
+                  <section>
                     <div class="books">
                       <div class="book">
                         <a href="http://www.amazon.de/dp/3864903572" target="_blank">
@@ -73,7 +74,6 @@
                       </div>
                     </div>
                 
-
                     <br>
                 
                     <small>
@@ -82,15 +82,23 @@
                         <a href="http://d-koppenhagen.de" target="_blank">Danny Koppenhagen</a> |
                         <a href="http://ferdinand-malcher.de/" target="_blank">Ferdinand Malcher</a>
                     </small>
-                </section>
+                    </section>
 
-                <section data-markdown>
-                    <script type="text/template">
-                      <i class="fa fa-info" style="font-size:6em;color:#4D769A;"></i>
+                    <section data-markdown>
+                        <script type="text/template">
+                        <i class="fa fa-info" style="font-size:6em;color:#4D769A;"></i>
 
-                      Alle gezeigten Beispiele basieren auf<br>
-                      dem Release Candidate 1 von Angular 2.<br>
-                    </script>
+                        Alle gezeigten Beispiele basieren auf<br>
+                        dem Release Candidate 1 von Angular 2.<br>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        ## Was wir bauen wollen
+
+                        ![](img/app.png)
+                    </section>
+
                 </section>
 
                 <section data-state="typescript">
@@ -112,11 +120,8 @@
                             ## Setup
 
                             ```ruby|cmd
-                            $ npm install -g angular-cli
+                            $ npm install -g typescript typings
                             ```
-                            <small>
-                            [Angular-CLI](https://github.com/angular/angular-cli) / [atom-typescript](https://atom.io/packages/atom-typescript)
-                            </small>
                         </script>
                     </section>
 
@@ -143,23 +148,18 @@
                     <section data-markdown>
                         <script type="text/template">
                             <i class="ng-shield fa fa-github "></i>
-                            ## <a href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">Angular-CLI</a>
+                            ## <a href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">
+                            CLI</a>
                             <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
                         </script>
                     </section>
-                
-                    <section data-markdown>
-                        ## Was wir bauen wollen
-
-                        ![](img/app.png)
-                    </section>
-                
+                                
                     <section data-markdown>
                         <script type="text/template">
                             # <i class="fa fa-github"></i> <i class="ion ion-social-nodejs"></i> <i class="ion ion-social-angular"></i>
 
                             ```ruby|cmd|small
-                            $ npm install -g angular-cli@0.0.30
+                            $ npm install -g angular-cli
                             $ ng help
                             $ ng new BookRating
                             $ cd BookRating
