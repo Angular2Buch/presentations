@@ -278,9 +278,20 @@
                     </section>
 
                     <section data-markdown>
+                      <script type="text/template">
+                        ## BookComponent
+                        <small>Komponente zum Anzeigen von Büchern</small>
+
+                        ```ruby|cmd
+                        $ ng generate component book
+                        ```
+                      </script>
+                    </section>
+
+                    <section data-markdown>
                         <script type="text/template">
                             ## Bücher-Klasse
-                            <small>$ ng g class shared/book</small>
+                            <small>$ ng generate class shared/book</small>
 
                             ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/shared/book.ts
                             loading...
@@ -288,23 +299,12 @@
                         </script>
                     </section>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## BookComponent
-                            <small>zweite Komponente generieren lassen</small>
-
-                            ```ruby|cmd
-                            $ ng generate component BookComponent
-                            ```
-                        </script>
-                        </script>
-                    </section>
 
                     <section data-markdown>
                         <script type="text/template">
                             ## BookComponent
                             <small>__Komponente__ soll ein einzelnes Buch anzeigen</small>
-                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/with-input.ts
+                            ```typescript|contenteditable|spellcheck=false|small|data-show-source=./samples/components/book-component/book.component-template-binding.ts
                             loading...
                             ```
                         </script>
@@ -315,7 +315,7 @@
                             ## Template Binding
                             <small>Interpolation: Daten können via __`{{ }}`__ gebunden werden</small>
 
-                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/dashboard/template-binding.html
+                            ```html|contenteditable|spellcheck=false|data-show-source=./samples/components/boook-component/book.component-template-binding.html
                             loading...
                             ```
                         </script>

@@ -32,8 +32,9 @@
 * CHANGE app.component.ts: `template: '<br-dashboard></br-dashboard>',`
 * ADD app.component.ts: `directives: [DashboardComponent]`
 
-# Domain
+# Book component
 
+* ng generate component book
 * ng generate class shared/book
 * ```
   export class Book {
