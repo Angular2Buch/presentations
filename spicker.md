@@ -14,3 +14,11 @@
 * cd book-rating
 * npm link angular-cli
 * npm start
+
+# Bootstrap (UI)
+
+* npm install bootstrap@3.3.6 --save
+  * CHANGE angular-cli-build.js: `'bootstrap/dist/**`
+  * ADD index.html: <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+  * ADD index.html: <body class="container">
+  * ADD optional SVG + h1
