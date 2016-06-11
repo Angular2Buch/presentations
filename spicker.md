@@ -31,3 +31,13 @@
 * ADD app.component.ts: `import { DashboardComponent } from './dashboard'`
 * CHANGE app.component.ts: `template: '<br-dashboard></br-dashboard>',`
 * ADD app.component.ts: `directives: [DashboardComponent]`
+
+# Domain
+
+* ng generate class shared/book
+* ```
+  export class Book {
+      constructor(public title: string,
+                  public description: string,
+                  public rating: number = 0) { }
+  }```
