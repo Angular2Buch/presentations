@@ -22,3 +22,12 @@
   * ADD index.html: <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
   * ADD index.html: <body class="container">
   * ADD optional SVG + h1
+
+# Dashboard
+
+* ng generate component dashboard
+* CHANGE dashboard.component.ts: neuer Selektor: br-dashboard + `this.books = ['Angular 2', 'AngularJS 1'];`
+* CHANGE dashboard.component.ts: `template: `<div>{{ books }}</div>``
+* ADD app.component.ts: `import { DashboardComponent } from './dashboard'`
+* CHANGE app.component.ts: `template: '<br-dashboard></br-dashboard>',`
+* ADD app.component.ts: `directives: [DashboardComponent]`
