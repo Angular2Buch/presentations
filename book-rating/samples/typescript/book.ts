@@ -10,6 +10,6 @@ class Book {
   }
 
   rateUp() {
-      this.rating++;
+    this.rating++;
   }
 }
