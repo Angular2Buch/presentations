@@ -32,7 +32,7 @@
 * CHANGE app.component.ts: `template: '<br-dashboard></br-dashboard>',`
 * ADD app.component.ts: `directives: [DashboardComponent]`
 
-# Book component
+# Book component (Property binding)
 
 * ng generate class shared/book
 * ```
@@ -42,8 +42,17 @@
                   public rating: number = 0) { }
   }```
 * ng generate component book
-* CHANGE BookComponent according to book.component-input-binding[.ts|.html]
+* CHANGE BookComponent according to book.component-property-binding[.ts|.html]
 * CHANGE dashboard.component.ts (`dashboard.component-mini.ts` from slides)
 * mehrere bücher:
   * Array of books[]!
   * `<br-book [information]="book" *ngFor="let book of books; let i = index"></br-book>`
+
+
+# Dashboard component (Event binding)
+
+* ADD templateUrl: --> `dashboard.component-event-binding`
+* ADD `add(title, comment) {}`
+
+# Running TESTS
+* `ng build && ng test --build=false` see https://github.com/angular/angular-cli/issues/864
