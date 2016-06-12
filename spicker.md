@@ -44,3 +44,6 @@
 * ng generate component book
 * CHANGE BookComponent according to book.component-input-binding[.ts|.html]
 * CHANGE dashboard.component.ts (`dashboard.component-mini.ts` from slides)
+* mehrere bücher:
+  * Array of books[]!
+  * `<br-book [information]="book" *ngFor="let book of books; let i = index"></br-book>`
