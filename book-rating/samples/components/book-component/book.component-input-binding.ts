@@ -8,8 +8,7 @@ import { Book } from '../shared';
   templateUrl: 'book.component.html'
 })
 export class BookComponent {
-  @Input() information: Book;   // <-- !!
+  @Input() information: Book;   // <--- @Input() decorator
 
-  constructor() {
-  }
+  constructor() { }
 }

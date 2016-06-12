@@ -42,3 +42,5 @@
                   public rating: number = 0) { }
   }```
 * ng generate component book
+* CHANGE BookComponent according to book.component-input-binding[.ts|.html]
+* CHANGE dashboard.component.ts (`dashboard.component-mini.ts` from slides)
