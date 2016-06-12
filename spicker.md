@@ -34,7 +34,6 @@
 
 # Book component
 
-* ng generate component book
 * ng generate class shared/book
 * ```
   export class Book {
@@ -42,3 +41,4 @@
                   public description: string,
                   public rating: number = 0) { }
   }```
+* ng generate component book
