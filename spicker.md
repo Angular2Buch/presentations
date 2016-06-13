@@ -54,5 +54,18 @@
 * ADD templateUrl: --> `dashboard.component-event-binding`
 * ADD `add(title, comment) {}`
 
+#  Book Component (Rating buttons)
+
+* HTML, Buttons:
+  ```
+  <button (click)="rateUp()" class="btn btn-default glyphicon glyphicon-thumbs-up"></button>
+  <button (click)="rateDown()" class="btn btn-default glyphicon glyphicon-thumbs-down"></button>
+  ```
+  * TS: add methods to book entitity
+  ```
+  rateUp() { this.rating++;  }
+  rateDown() { this.rating--; }
+  ```
+
 # Running TESTS
 * `ng build && ng test --build=false` see https://github.com/angular/angular-cli/issues/864
