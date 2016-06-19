@@ -3,9 +3,6 @@ module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	var base = grunt.option('base') || '.';
 
-	// changed by johannes:
-	base = base + "/..";
-
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -97,7 +94,7 @@ module.exports = function(grunt) {
 				options: {
 					port: port,
 					base: base,
-					livereload: false,
+					livereload: true,
 					open: true
 				}
 			}
@@ -131,7 +128,7 @@ module.exports = function(grunt) {
 				tasks: 'css-core'
 			},
 			html: {
-				files: [ 'index.html', '../book-rating-livecoding/**']
+				files: [ 'index.html', 'workshop.html', '../book-rating-livecoding/**']
 			}
 		}
 
