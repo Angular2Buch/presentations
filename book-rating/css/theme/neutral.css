@@ -472,7 +472,8 @@ ul.model {
       -ms-animation: 1s blink step-end infinite;
       -o-animation: 1s blink step-end infinite;
       animation: 1s blink step-end infinite; }
-    .reveal pre code.cmd.white span.keyword {
+    .reveal pre code.cmd.white span.hljs-keyword,
+    .reveal pre code.cmd.white span.hljs-title {
       color: #e2e2e2 !important; }
   .reveal pre code.cmd.small {
     font-size: 0.85em !important; }

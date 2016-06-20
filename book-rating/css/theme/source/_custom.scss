@@ -175,7 +175,8 @@ ul.model {
             animation: 1s blink step-end infinite;
         }
 
-        &.white span.keyword {
+        &.white span.hljs-keyword,
+        &.white span.hljs-title, {
             color: #e2e2e2 !important;
         }
     }
