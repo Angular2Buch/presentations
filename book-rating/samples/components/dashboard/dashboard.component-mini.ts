@@ -6,7 +6,7 @@ import { Book } from '../shared';
 @Component({
   moduleId: module.id,
   selector: 'br-dashboard',
-  template: '<br-book [information]="book"></br-book>',
+  template: '<br-book [book]="book"></br-book>',
   directives: [BookComponent]
 })
 export class DashboardComponent implements OnInit {
