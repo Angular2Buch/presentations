@@ -1,15 +1,17 @@
-import {it, describe, expect, inject, beforeEachProviders} from '@angular/core/testing';
-import {BookComponent} from './book-component';
-import {Book} from '../../models/book';
+import { beforeEachProviders, describe, expect, it } from '@angular/core/testing';
 
-describe('BookComponent', () => {
+import {BookComponent} from './book.component';
+import {Book} from '../shared';
+
+describe('Rate a book', () => {
   beforeEachProviders(() => [BookComponent]);
 
-  it('should increase book rating on rateUp()', inject([BookComponent], (bookComponent: BookComponent) => {
+  it('should increase the rating by one', () => {
+    let component = new BookComponent();
 
-    bookComponent.book = new Book('Test Title', 'Test Comment');
-    bookComponent.rateUp();
+    component.book = new Book('title', 'description');
+    component.rateUp();
 
-    expect(bookComponent.book.rating).toBe(1);
-  }));
+    expect(component.book.rating).toBe(1);
+  });
 });
