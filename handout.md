@@ -64,6 +64,7 @@ Class     | `ng g class my-new-class`
 Interface | `ng g interface my-new-interface`
 Enum      | `ng g enum my-new-enum`
 
+
 ## 3. Die App
 
 ![App](img/app-full.png)
@@ -121,4 +122,69 @@ Element-Referenzen | #idhandler
 Bedingungen        | *ngIf="expression"
 Schleifen          | *ngFor="expression"
 Styling            | [class.nameOfClass]="expression" 
+<<<<<<< HEAD
 >>>>>>> handout: HTTP
+=======
+
+
+
+# Extra: HTTP
+
+Um Zugriffe auf ein Backend realisieren zu köonnen, müssen asynchrone
+Aufrufe auf die Serverschnittstelle (XMLHttpRequest) erfolgen.
+Die Angular-Http-Klasse kapselt und vereinfacht das asynchrone Aufrufe per HTTP.
+
+Den Teilnehmern steht folgende API zur Verfügung:
+* http://book-monkey2-api.angular2buch.de/
+
+Eine Beschreibung der Schnittstele gibt es hier:
+* http://book-monkey2-api.angular2buch.de/swagger-ui/
+
+## Daten Laden per GET
+
+Dies ist ein Beispiel wie man `http` quick-and-dirty verwendet.
+Im Laufe des Workshops werden wir den Code als Service auslagern und Observables verwenden.
+
+```
+// main.ts
+
+import { HTTP_PROVIDERS } from '@angular/http';
+bootstrap(AppComponent, [HTTP_PROVIDERS]);
+
+```
+
+```
+import { Http, HTTP_PROVIDERS } from '@angular/http';
+import { Book } from '../shared';
+
+@Component({
+})
+export class MyComponent {
+
+  books: Book[];
+  book: Book;
+
+  constructor(private http: Http) {}
+
+  getAllBooks() {
+
+    this.http
+      .get('http://book-monkey2-api.angular2buch.de/books') // PLURAL S!
+      .subscribe(response => {
+        this.books = response.json();
+      });
+  }
+
+  getSingleBook(isbn) {
+
+    this.http
+      .get(`http://book-monkey2-api.angular2buch.de/book/${isbn}`) // kein PLURAL S!
+      .subscribe(response => {
+        this.book = response.json();
+      });
+    });
+  }
+}
+
+```
+>>>>>>> handout: Daten Laden per GET

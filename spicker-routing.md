@@ -2,11 +2,11 @@
 
 ## Service
 
-* Model `Book` ändern: jedes Buch bekommt beim Erstellen automatisch eine eindeutige ID
+* Model `Book` ändern: jedes Buch bekommt beim Erstellen automatisch eine eindeutige ISBN
 * Ordner `services` anlegen
 * Service erstellen: `ng g service services/BookStore`
 * drei Methoden:
-  - `getBook(id)`: liefert das Buch mit der ID `id` zurück
+  - `getBook(isbn)`: liefert das Buch mit der ID `isbn` zurück
   - `getAll()`: liefert alle Bücher als Arary zurück
   - `addBook(book)`: fügt ein neues Buch in die Liste ein
 * Provider registrieren
@@ -42,14 +42,14 @@
 ## Detail-Komponente
 * `ng g component BookDetails`
 * Route anlegen
-  - `{ path: 'book/:id', component: BookDetailsComponent }`
-  - Pfad `book/:id` lädt die Komponente `BookDetailsComponent`
-  - `:id` ist Platzhalter für Parameter
+  - `{ path: 'book/:isbn', component: BookDetailsComponent }`
+  - Pfad `book/:isbn` lädt die Komponente `BookDetailsComponent`
+  - `:isbn` ist Platzhalter für Parameter
 * Verlinken
   - in `BookComponent` Button mit Link anlegen
   - `ROUTER_DIRECTIVES` importieren
   - als Parameter die ID des Buchs übergeben
-  - `<a [routerLink]="['book', book?.id]">Anzeigen</a>`
+  - `<a [routerLink]="['book', book?.isbn]">Anzeigen</a>`
 * Ausprobieren
   - Wird Button angeklickt, leitet Anwendung weiter zur (leeren) Detailseite
   - ID steht in der URL
@@ -57,10 +57,10 @@
   - `ActivatedRoute` injizieren (in `BookDetailsComponent`): `private route: ActivatedRoute`
   - `ActivatedRoute.params` ist Observable!
   - subscriben und ID auslesen:
-    + `this.route.params.subscribe(params => { let id = params['id'] });`
+    + `this.route.params.subscribe(params => { let isbn = params['isbn'] });`
   - zur Demonstration die ID in Konsole loggen?
 * Buch über Service abrufen
-  - in Handler-Funktion für Subscribtion: `this.book = this.bs.getBook(id);`
+  - in Handler-Funktion für Subscribtion: `this.book = this.bs.getBook(isbn);`
   - zur Demonstration das ganze Buch auf Konsole loggen oder auf Seite anzeigen: `{{ book | json }}`
 * Template anlegen
   - von `BookComponent` kopieren, aber Rating entfernen
