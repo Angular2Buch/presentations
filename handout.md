@@ -6,6 +6,10 @@ Ihre Trainer:  Gregor Woiwode und Johannes Hoppe
 
 <hr>
 
+Wir entwickeln die Beispiel-Anwendung gegen folgendes Github-Repo:
+### https://github.com/Angular2Buch/angular2-workshop-dwx16
+
+
 ## 1. Setup & Angular-CLI
 
 Sie benötigen:
