@@ -65,6 +65,10 @@ Interface | `ng g interface my-new-interface`
 Enum      | `ng g enum my-new-enum`
 
 
+
+
+
+
 ## 3. Die App
 
 ![App](img/app-full.png)
@@ -75,44 +79,10 @@ Die Anwendung besteht zum Anfang aus drei Komponenten:
 
 ![App](img/book-rating-components.png)
 
-<<<<<<< HEAD
-## 4. Übungen
 
-### 1. - Komponente erstellen
+### 3.1 Angular Template-Syntax
 
-Lagern Sie das Formular zum erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
-Stellen Sie sicher, dass diese Komponente das Ereignis `(book-created)` veröffentlicht, wenn ein Buch erstellt wurde.
-Verarbeiten Sie das Ereignis in der `DashboardCompoent`, um das erstellte Buch der Liste hinzuzufügen. 
-
-### 2. - Tests für das Model `Book` schreiben
-
-Es wurde entschieden, dass der Wert eines Ratings nur zwischen `0` und `5` liegen darf.
-Weisen sie mit einem Unit-Test nach, dass die fachliche Anforderung erfüllt ist.
-
-```typescript
-// /src/app/shared/book.spec.ts
-describe('Rating a book', () => {
-    it('should not be allowed to have a rating greater than 5', () => {
-        // test
-    });
-
-     it('should not be possible have a rating smaller than 0', () => {
-        // test
-    });
-});
-```
-
-## 3. - Validator schreiben
-
-Um sicherzustellen, dass der Titel eines Buchs nur ein Mal vorkommt, soll ein Validator `CheckUniqueTitle` implementiert werden.
-Wenn der Titel beriets existeirt, soll das Formular nicht versendet werden dürfen.
-Außerdem, soll folgende Nachricht angezeigt werden: 'Der Titel dieses Buchs existiert bereits.'
-=======
-
-
-## Angular Template-Syntax
-
-Wir werden in diesem Workshop nur die wichtigsten Bindungs verwenden.
+Wir werden in diesem Workshop nur die wichtigsten Bindings verwenden.
 
 Name               | Binding
 ------------------ | -------------------------------
@@ -122,15 +92,12 @@ Element-Referenzen | #idhandler
 Bedingungen        | *ngIf="expression"
 Schleifen          | *ngFor="expression"
 Styling            | [class.nameOfClass]="expression" 
-<<<<<<< HEAD
->>>>>>> handout: HTTP
-=======
 
 
 
-# Extra: HTTP
+### 3.2 HTTP
 
-Um Zugriffe auf ein Backend realisieren zu köonnen, müssen asynchrone
+Um Zugriffe auf ein Backend realisieren zu können, müssen asynchrone
 Aufrufe auf die Serverschnittstelle (XMLHttpRequest) erfolgen.
 Die Angular-Http-Klasse kapselt und vereinfacht das asynchrone Aufrufe per HTTP.
 
@@ -140,10 +107,12 @@ Den Teilnehmern steht folgende API zur Verfügung:
 Eine Beschreibung der Schnittstele gibt es hier:
 * http://book-monkey2-api.angular2buch.de/swagger-ui/
 
-## Daten Laden per GET
-
 Dies ist ein Beispiel wie man `http` quick-and-dirty verwendet.
-Im Laufe des Workshops werden wir den Code als Service auslagern und Observables verwenden.
+Im Laufe des Workshops werden wir den Code
+* als Service auslagern und
+* Observables
+
+verwenden.
 
 ```
 // main.ts
@@ -187,4 +156,49 @@ export class MyComponent {
 }
 
 ```
->>>>>>> handout: Daten Laden per GET
+
+
+
+
+<hr>
+
+
+
+
+
+## 4. Übungen
+
+### 4.1. Komponente erstellen
+
+Lagern Sie das Formular zum erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
+Stellen Sie sicher, dass diese Komponente das Ereignis `(book-created)` veröffentlicht, wenn ein Buch erstellt wurde.
+Verarbeiten Sie das Ereignis in der `DashboardCompoent`, um das erstellte Buch der Liste hinzuzufügen. 
+
+### 4.2. Tests für das Model `Book` schreiben
+
+Es wurde entschieden, dass der Wert eines Ratings nur zwischen `0` und `5` liegen darf.
+Weisen sie mit einem Unit-Test nach, dass die fachliche Anforderung erfüllt ist.
+
+```typescript
+// /src/app/shared/book.spec.ts
+describe('Rating a book', () => {
+    it('should not be allowed to have a rating greater than 5', () => {
+        // test
+    });
+
+     it('should not be possible have a rating smaller than 0', () => {
+        // test
+    });
+});
+```
+
+### 4.3. Validator schreiben
+
+Um sicherzustellen, dass der Titel eines Buchs nur ein Mal vorkommt, soll ein Validator `CheckUniqueTitle` implementiert werden.
+Wenn der Titel beriets existeirt, soll das Formular nicht versendet werden dürfen.
+Außerdem, soll folgende Nachricht angezeigt werden: 'Der Titel dieses Buchs existiert bereits.'
+
+
+
+
+
