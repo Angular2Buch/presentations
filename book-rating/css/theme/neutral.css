@@ -173,7 +173,14 @@ body {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: monospace; 
+  display: inline-block;
+  padding: .2em;
+  margin-bottom: .2em;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
 
 .reveal pre code {
   display: block;
