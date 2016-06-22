@@ -74,6 +74,7 @@ Die Anwendung besteht zum Anfang aus drei Komponenten:
 
 ![App](img/book-rating-components.png)
 
+<<<<<<< HEAD
 ## 4. Übungen
 
 ### 1. - Komponente erstellen
@@ -105,3 +106,19 @@ describe('Rating a book', () => {
 Um sicherzustellen, dass der Titel eines Buchs nur ein Mal vorkommt, soll ein Validator `CheckUniqueTitle` implementiert werden.
 Wenn der Titel beriets existeirt, soll das Formular nicht versendet werden dürfen.
 Außerdem, soll folgende Nachricht angezeigt werden: 'Der Titel dieses Buchs existiert bereits.'
+=======
+
+
+## Angular Template-Syntax
+
+Wir werden in diesem Workshop nur die wichtigsten Bindungs verwenden.
+
+Name               | Binding
+------------------ | -------------------------------
+Property-Binding   | [property]
+Event-Binding      | (event)
+Element-Referenzen | #idhandler
+Bedingungen        | *ngIf="expression"
+Schleifen          | *ngFor="expression"
+Styling            | [class.nameOfClass]="expression" 
+>>>>>>> handout: HTTP
