@@ -297,24 +297,32 @@ describe('Rating a book', () => {
 
 ## 4. Übungen
 
-## 4.1 - Eingaben erzwingen
+
+### 4.1 - Eingaben erzwingen
 > HTML-Elemente sind auch nur "Komponenten"
 
 Stellen Sie sicher, dass das Formular nur versendet werden kann, wenn Titel und Beschreibung eingegeben wurden.
 Nutzen sie `[disabled]`, um den Button zu deaktivieren.  
 
+
+### 4.2 - Hinweise bei Fehleingaben geben
+> Ausgaben mit *ngIf
+
+Blenden Sie einen Hinweis ein, wenn der Titel oder die Beschreibung keinen Wert haben
+(Bsp.: Bitte geben Sie den Titel des Buchs ein).
+
 **Tipp** Auch bei Standard-HTML-Elementen können Property-Bindings eingesetzt werden.
 
 
-
-### 4.1 - Das Dashboard aufräumen
+### 4.3 - Das Dashboard aufräumen
 > Eine neue Komponente erstellen
 
-Lagern Sie das Formular zum erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
+Lagern Sie das Formular zum Erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
 Stellen Sie sicher, dass diese Komponente das Ereignis `(book-created)` veröffentlicht, wenn ein Buch erstellt wurde.
 Verarbeiten Sie das Ereignis in der `DashboardCompoent`, um das erstellte Buch der Liste hinzuzufügen. 
 
-### 4.2 - Fachliche Anforderungen für unser Datenmodell
+
+### 4.4 - Fachliche Anforderungen für unser Datenmodell
 > Tests für das Model `Book` schreiben
 
 Es wurde entschieden, dass der Wert eines Ratings nur zwischen `0` und `5` liegen darf.
@@ -336,14 +344,19 @@ describe('Rating a book', () => {
 
 
 
-## 4.4 - Hinweise bei Fehleingaben geben
-> Ausgaben mit *ngIf
-
-Blenden Sie einen Hinweis ein, wenn der Titel oder die Beschreibung keinen Wert haben
-(Bsp.: Bitte geben Sie den Titel des Buchs ein).
-
 ## 4.5 - Funktionsweise des Dashboards sicherstellen
 > Formulartests
+
+Schreiben Sie einen Test für die `BookComponent`.
+
+- Wenn ein Buch **positiv** bewertet wird, soll dessen Bewertung um `1` *höher* sein als zuvor. 
+- Wenn ein Buch **negativ** bewertet wird, soll dessen Bewertung um `1` *niedriger* sein als zuvor.
+
+
+## << Aufgaben für Zuhause >>
+
+Wir helfen gerne per Mail! 
+
 
 ## 4.6 - Gültige Eingaben positiv hervorheben
 > Mit `[class]` CSS dynamisch setzen
@@ -356,7 +369,7 @@ Stellen Sie sicher, dass die Schriftfarbe innerhalb der Eingabefelder `grün` is
 
 Geben Sie, an einer geeigneten Stelle, die Gesamtzahl der im Dashboard gepflegten Bücher an.
 
-## 4.8 - Fuknktionsweise des Dashboards sicherstellen
+## 4.8 - Funktionsweise des Dashboards sicherstellen
 > Formulartests
 
 Schreiben Sie einen Test für die `BookComponent`.
@@ -364,8 +377,12 @@ Schreiben Sie einen Test für die `BookComponent`.
 - Wenn ein Buch **positiv** bewertet wird, soll dessen Bewertung um `1` *höher* sein als zuvor. 
 - Wenn ein Buch **negativ** bewertet wird, soll dessen Bewertung um `1` *niedriger* sein als zuvor.
 
+
+<!--
 ## *. - Validator schreiben
 
 Um sicherzustellen, dass der Titel eines Buchs nur ein Mal vorkommt, soll ein Validator `CheckUniqueTitle` implementiert werden.
 Wenn der Titel beriets existeirt, soll das Formular nicht versendet werden dürfen.
 Außerdem, soll folgende Nachricht angezeigt werden: 'Der Titel dieses Buchs existiert bereits.'
+
+-->
