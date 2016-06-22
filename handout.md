@@ -297,6 +297,16 @@ describe('Rating a book', () => {
 
 ## 4. Übungen
 
+## 4.1 - Eingaben erzwingen
+> HTML-Elemente sind auch nur "Komponenten"
+
+Stellen Sie sicher, dass das Formular nur versendet werden kann, wenn Titel und Beschreibung eingegeben wurden.
+Nutzen sie `[disabled]`, um den Button zu deaktivieren.  
+
+**Tipp** Auch bei Standard-HTML-Elementen können Property-Bindings eingesetzt werden.
+
+
+
 ### 4.1 - Das Dashboard aufräumen
 > Eine neue Komponente erstellen
 
@@ -323,13 +333,8 @@ describe('Rating a book', () => {
 });
 ```
 
-## 4.3 - Eingaben erzwingen
-> HTML-Elemente sind auch nur Komponenten
 
-Stellen Sie sicher, dass das Formular nur versendet werden kann, wenn Titel und Beschreibung eingegeben wurden.
 
-**Tipp** Auch bei Standard-HTML-Elementen können Property-Bindings eingesetzt werden.
-Nutzen sie `[disabled]`, um den Button zu deaktivieren.
 
 ## 4.4 - Hinweise bei Fehleingaben geben
 > Ausgaben mit *ngIf
@@ -337,7 +342,7 @@ Nutzen sie `[disabled]`, um den Button zu deaktivieren.
 Blenden Sie einen Hinweis ein, wenn der Titel oder die Beschreibung keinen Wert haben
 (Bsp.: Bitte geben Sie den Titel des Buchs ein).
 
-## 4.5 - Fuknktionsweise des Dashboards sicherstellen
+## 4.5 - Funktionsweise des Dashboards sicherstellen
 > Formulartests
 
 ## 4.6 - Gültige Eingaben positiv hervorheben
