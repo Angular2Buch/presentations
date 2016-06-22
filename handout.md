@@ -172,13 +172,15 @@ export class MyComponent {
 
 ## 4. Übungen
 
-### 4.1. Komponente erstellen
+### 4.1 - Das Dashboard aufräumen
+> Eine neue Komponente erstellen
 
 Lagern Sie das Formular zum erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
 Stellen Sie sicher, dass diese Komponente das Ereignis `(book-created)` veröffentlicht, wenn ein Buch erstellt wurde.
 Verarbeiten Sie das Ereignis in der `DashboardCompoent`, um das erstellte Buch der Liste hinzuzufügen. 
 
-### 4.2. Tests für das Model `Book` schreiben
+### 4.2 - Fachliche Anforderungen für unser Datenmodell
+> Tests für das Model `Book` schreiben
 
 Es wurde entschieden, dass der Wert eines Ratings nur zwischen `0` und `5` liegen darf.
 Weisen sie mit einem Unit-Test nach, dass die fachliche Anforderung erfüllt ist.
@@ -196,13 +198,16 @@ describe('Rating a book', () => {
 });
 ```
 
-### 4.3. Validator schreiben
+## 4.3 - Fuknktionsweise des Dashboards sicherstellen
+> Formulartests
+
+Schreiben Sie einen Test für die `BookComponent`.
+
+- Wenn ein Buch **positiv** bewertet wird, soll dessen Bewertung um `1` *höher* sein als zuvor. 
+- Wenn ein Buch **negativ** bewertet wird, soll dessen Bewertung um `1` *niedriger* sein als zuvor.
+
+## *. - Validator schreiben
 
 Um sicherzustellen, dass der Titel eines Buchs nur ein Mal vorkommt, soll ein Validator `CheckUniqueTitle` implementiert werden.
 Wenn der Titel beriets existeirt, soll das Formular nicht versendet werden dürfen.
 Außerdem, soll folgende Nachricht angezeigt werden: 'Der Titel dieses Buchs existiert bereits.'
-
-
-
-
-
