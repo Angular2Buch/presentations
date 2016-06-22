@@ -554,41 +554,57 @@
                             ## Integrationstest
                             <small>Template und Komponente testen</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/book-component.orig.spec.ts
-                            loading...
-                            ```
+                            1. Fake eines Konsumenten für Komponente erstellen
+                            2. `ComponentBuilder` bereitstellen
+                            3. `Component` über `ComponentBuilder` initialisieren
+                            4. Formulartest implementieren
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                            <h1 style="position:absolute;top: -143px; right: -100px; font-size: 11em; color: silver !important">?!</h1>
-                            <br>
-                            ## etwas aufräumen &nbsp; &nbsp; &nbsp; &nbsp;
+                        ## Schritt 1 von 4
+                        <small>Zu testende Komponente einbinden</small>
+
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/rc-2/0-setup-test-controller.ts
+                        loading...
+                        ```                        
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## beforeEach
-                            <small>aufgeräumter Code zum Testen einer Komponente</small>
+                        ## Schritt 2 von 4
+                        <small>Der **ComponentBuilder**</small>
 
-                            ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/book-component.cleanup.spec.ts
-                            loading...
-                            ```
+                        ```typescript|contenteditable|spellcheck=false|data-show-source=./samples/specs/rc-2/1-setup-test-component-builder.ts
+                        loading...
+                        ```                        
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## Spec
-                            <small>__Fortgeschrittener Test:__ Initialisierte Komponente und Spy</small>
+                        ## Schritt 3 von 4
+                        <small>Die **Component** erzeugen</small>
 
-                            ```typescript|contenteditable|small|spellcheck=false|data-show-source=./samples/specs/book-component.TestComponentBuilder.spec.ts
-                            loading...
-                            ```
+                        ```typescript|small|contenteditable|spellcheck=false|data-show-source=./samples/specs/rc-2/2-setup-component.ts
+                        loading...
+                        ```                        
                         </script>
                     </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Finaler Schritt
+                        <small>Testen</small>
+
+                        ```typescript|small|contenteditable|spellcheck=false|data-show-source=./samples/specs/rc-2/3-write-test.ts
+                        loading...
+                        ```
+                        </script>
+                    </section>
+
                 </section>
 
                 <section>
@@ -605,11 +621,8 @@
                             Slides: <a href="https://angular2buch.de/presentations/book-rating/" target="_blank">bit.do/dos-angular2</a><br>
                             Demo: <a href="https://github.com/Angular2Buch/angular-2-book-rating-app/" target="_blank">bit.do/dos-angular2-demo</a><br><br>
                         </small>
-
-
                     </script>
                 </section>
-
 
             </div>
 
