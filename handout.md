@@ -329,7 +329,35 @@ describe('Rating a book', () => {
 });
 ```
 
-## 4.3 - Fuknktionsweise des Dashboards sicherstellen
+## 4.3 - Eingaben erzwingen
+> HTML-Elemente sind auch nur Komponenten
+
+Stellen Sie sicher, dass das Formular nur versendet werden kann, wenn Titel und Beschreibung eingegeben wurden.
+
+**Tipp** Auch bei Standard-HTML-Elementen können Property-Bindings eingesetzt werden.
+Nutzen sie `[disabled]`, um den Button zu deaktivieren.
+
+## 4.4 - Hinweise bei Fehleingaben geben
+> Ausgaben mit *ngIf
+
+Blenden Sie einen Hinweis ein, wenn der Titel oder die Beschreibung keinen Wert haben
+(Bsp.: Bitte geben Sie den Titel des Buchs ein).
+
+## 4.5 - Fuknktionsweise des Dashboards sicherstellen
+> Formulartests
+
+## 4.6 - Gültige Eingaben positiv hervorheben
+> Mit `[class]` CSS dynamisch setzen
+
+Stellen Sie sicher, dass die Schriftfarbe innerhalb der Eingabefelder `grün` ist, wenn mehr als `3` Zeichen eingegeben wurden.
+
+**Hinweis** Durch die Integration von bootstrap, dem CSS-Framework, kann die CSS-Klasse `text-success` eingesetzt.
+
+## 4.7 - Bücherliste auswerten
+
+Geben Sie, an einer geeigneten Stelle, die Gesamtzahl der im Dashboard gepflegten Bücher an.
+
+## 4.8 - Fuknktionsweise des Dashboards sicherstellen
 > Formulartests
 
 Schreiben Sie einen Test für die `BookComponent`.
