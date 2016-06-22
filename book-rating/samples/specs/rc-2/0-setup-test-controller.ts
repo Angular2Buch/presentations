@@ -5,4 +5,4 @@
   `,
   directives: [DashboardComponent]
 })
-class BookComponentTestController { }
+class DashboardComponentTestController { }

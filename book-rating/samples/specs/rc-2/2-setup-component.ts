@@ -1,19 +1,19 @@
 describe('...', () => {
     // ...
     describe('Rating a book', () => {
-        let fixture: ComponentFixture<BookComponent>;
+        let fixture: ComponentFixture<Dasboard>;
 
         beforeEach(() => {
           return builder
-            .createAsync(BookComponentTestController)
-            .then((_fixture_: ComponentFixture<BookComponent>) => {
+            .createAsync(DasboardTestController)
+            .then((_fixture_: ComponentFixture<Dasboard>) => {
               fixture = _fixture_;
 
               control = new FixtureControl(fixture);
 
               dashboard = fixture
                             .debugElement
-                            .query(By.directive(BookComponent))
+                            .query(By.directive(Dasboard))
                             .componentInstance;
 
               dashboard.ngOnInit();
