@@ -363,6 +363,20 @@
                     </section>
                 </section>
 
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        <i class="ng-shield fa fa-graduation-cap"></i>
+                        ## Gesamtzahl der Bücher ausgeben
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        ### Bücherliste auswerten
+
+                        Geben Sie, an einer geeigneten Stelle, die Gesamtzahl der im Dashboard gepflegten Bücher an.
+                    </section>
+                </section>
+
                 <section data-state="forms">
 
                     <section data-markdown>
@@ -417,6 +431,23 @@
                         </script>
                     </section>
 
+                </section>
+
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        <i class="ng-shield fa fa-graduation-cap"></i>
+                        ## Eingabevalidierung
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        ### HTML-Elemente sind auch nur Komponenten
+
+                        Stellen Sie sicher, dass das Formular nur versendet werden kann, wenn Titel und Beschreibung eingegeben wurden.
+
+                        **Tipp** Auch bei Standard-HTML-Elementen können Property-Bindings eingesetzt werden.
+                        Nutzen sie `[disabled]`, um den Button zu deaktivieren.
+                    </section>
                 </section>
 
                 <section data-state="refresh">
@@ -500,6 +531,22 @@
                     </section>
                 </section>
 
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        <i class="ng-shield fa fa-graduation-cap"></i>
+                        ## 4.1 - Das Dashboard aufräumen
+                        </script>
+                    </section>
+                    <section data-markdown>
+                    ### Eine neue Komponente erstellen
+
+                    Lagern Sie das Formular zum erstellen eines Buchs in eine eigene Komponente `CreateBookForm` aus.
+                    Stellen Sie sicher, dass diese Komponente das Ereignis `(book-created)` veröffentlicht, wenn ein Buch erstellt wurde.
+                    Verarbeiten Sie das Ereignis in der `DashboardCompoent`, um das erstellte Buch der Liste hinzuzufügen. 
+                    </section>
+                </section>
+
                 <section data-state="karma">
 
                     <section data-markdown>
@@ -519,6 +566,41 @@
                               it("contains spec with an expectation", function() {
                                 expect(true).toBe(true);
                               });
+                            });
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Demo
+                            <small>TypeScript Klassen testen</small>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-graduation-cap"></i>
+                            ## Fachliche Anforderungen für unser Datenmodell
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Tests für das Model `Book` schreiben
+
+                            Es wurde entschieden, dass der Wert eines Ratings nur zwischen `0` und `5` liegen darf.
+                            Weisen sie mit einem Unit-Test nach, dass die fachliche Anforderung erfüllt ist.
+
+                            ```typescript
+                            // /src/app/shared/book.spec.ts
+                            describe('Rating a book', () => {
+                                it('should not be allowed to have a rating greater than 5', () => {
+                                    // test
+                                });
+
+                                it('should not be possible have a rating smaller than 0', () => {
+                                    // test
+                                });
                             });
                             ```
                         </script>
@@ -615,6 +697,23 @@
                         ```typescript|small|contenteditable|spellcheck=false|data-show-source=./samples/specs/rc-2/3-write-test.ts
                         loading...
                         ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-graduation-cap"></i>
+                            ## Fuknktionsweise des Dashboards sicherstellen
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Formulartests
+
+                            Schreiben Sie einen Test für die `BookComponent`.
+
+                            - Wenn ein Buch **positiv** bewertet wird, soll dessen Bewertung um `1` *höher* sein als zuvor. 
+                            - Wenn ein Buch **negativ** bewertet wird, soll dessen Bewertung um `1` *niedriger* sein als zuvor.
                         </script>
                     </section>
 

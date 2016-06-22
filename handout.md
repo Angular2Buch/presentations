@@ -161,13 +161,7 @@ export class MyComponent {
 
 ```
 
-
-
-
 <hr>
-
-
-
 
 
 ## Tests
