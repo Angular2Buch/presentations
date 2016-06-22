@@ -51,7 +51,7 @@
                     <img data-src="img/angular2-logo.svg" width="30%"></img>
 
                     <h1 style="font-size: 2.5em; line-height: 1.3em;">Angular 2</h1>
-                    <h3 style="font-size: 0.8em;">DWX Workshop</h3>
+                    <h3 style="font-size: 0.8em;">Tages-Workshop</h3>
 
                     <br class="hidePrint" />
                     <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>
@@ -107,9 +107,9 @@
 
                         1. Warmup Projekt-Setup mit Angular-CLI
                         2. [BookRating App](./#/4)
-                        3. Component Testing
-                        4. Routing
-                        5. HTTP 
+                        3. [Component Testing](./#/13)
+                        4. [Routing](./#/14)
+                        5. [HTTP](./#/15)
                         </script>
                     </section>
                 </section>
@@ -750,6 +750,123 @@
                     </section>
 
                 </section>
+                
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            <i class="ng-shield fa fa-map-signs"></i>
+                            ## Routing
+                            
+                            <small>3.0.0-alpha.7-der-heiße-Scheiß</small>
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 1. Routenkonfiguration
+                            <small>Pfade tragen niemals einen Slash davor!</small>
+                            
+                            ```typescript
+                            // app.routes.ts
+                            import { RouterConfig } from '@angular/router';
+
+                            import { DashboardComponent } from './dashboard/index';
+                            //import { BookDetailsComponent } from './book-details/index'; // TODO
+
+                            // AppRoutes exportieren! --> import
+                            export const AppRoutes: RouterConfig = [  
+                                { path: '', component: DashboardComponent },
+                                //{ path: 'book/:isbn', component: BookDetailsComponent }  // TODO
+                            ];
+                            ```
+                            
+                            
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2. RouterConfig registrieren
+                            <small>Pfade tragen niemals einen Slash davor!</small>
+                            
+                            ```typescript
+                            // main.ts
+                            import { provideRouter } from '@angular/router';
+                            import { /* [...] */,  AppRoutes } from './app/';
+                            
+                            bootstrap(AppComponent, [HTTP_PROVIDERS, 
+                              provideRouter(AppRoutes)  // !!!!
+                            ]);                          
+                            ```
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 3. RouterOutlet einbinden
+                            <small>ROUTER_DIRECTIVES == RouterOutlet, RouterLink, RouterLinkActive</small>
+                            
+                            ```typescript
+                            // app.component.ts
+                            import { ROUTER_DIRECTIVES } from '@angular/router';
+                            
+                            @Component({
+                              /* [...] */
+                              directives: [ROUTER_DIRECTIVES]
+                            })
+                            export class AppComponent { }   
+                            ```
+                            
+                            ```html                           
+                            <!-- app.component.ts -->
+                            <router-outlet></router-outlet>
+                            ```
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                      <script type="text/template">
+                        ## 4. Detailseite
+                        
+                        ```ruby|cmd|small
+                        $ ng g component BookDetails
+                        ```
+                        
+                        ```typescript|small
+                        // book-details.component.ts
+                        import { Component, OnInit } from '@angular/core';
+                        import { ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
+
+                        @Component({
+                          moduleId: module.id,
+                          selector: 'br-book-details',
+                          templateUrl: 'book-details.component.html',
+                          directives: [ROUTER_DIRECTIVES] // !!!!
+                        })
+                        export class BookDetailsComponent implements OnInit {
+                          isbn: string;
+                          constructor(private route: ActivatedRoute) {}
+
+                          ngOnInit() {
+                            this.route.params.subscribe(params => {
+                              this.isbn = params['isbn'];
+                            });
+                          }
+                        }
+                        ```
+                      </script>
+                    </section>
+
+                    <section data-markdown>
+                      <script type="text/template">
+                        ## 5. Fertig!
+                        
+                        ```html
+                        <!-- book.component.html -->
+                        <a [routerLink]="['book', book?.isbn]">Anzeigen</a>
+                        ``` 
+                      </script>
+                    </section>                    
+                    
+                </section>   
+                
 
                 <section>
 
@@ -762,7 +879,10 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Observables over Promises
+                            <br>
                             ![Observables](img/observables.png)
+                            
+                            <br>
                             <small>
                                 <a href="http://reactivex.io/documentation" target="_blank">http://reactivex.io/documentation/observable.html</a>
                             </small>
