@@ -738,7 +738,36 @@
                             </small>
                         </script>
                     </section>
-                    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## @angular/http
+
+                            ```typescript
+                            import { Http } from '@angular/http';
+                            import 'rxjs/add/operator/map';                        
+                            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## HTTP-Modul API
+
+                            ```typescript
+                            // @Component({ ... })
+                            export class DashboardComponent(private http:Http) {
+                                this.http
+                                    .get()   ||
+                                    .post()  ||
+                                    .put()   ||
+                                    .delete()
+                                    
+                                    .subscribe(response => /* Daten verarbeiten */);
+                            }                      
+                            ```
+                        </script>
+                    </section>
                 </section>
 
                 <section>
