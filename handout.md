@@ -76,7 +76,6 @@ Enum      | `ng g enum my-new-enum`
 ## 3. Die App
 
 ![App](img/app-full.png)
-
 Wie entwickeln eine Anwendung um Bücher zu bewerten.
 Die App wird schrittweise ausgebaut.
 Die Anwendung besteht zum Anfang aus drei Komponenten:
@@ -98,8 +97,96 @@ Schleifen          | *ngFor="expression"
 Styling            | [class.nameOfClass]="expression" 
 
 
+### 3.2 Routing
 
-### 3.2 HTTP
+Wir verwenden den neuen Router Workshop 3.0.0-alpha.7.
+
+#### 3.2.1. Routenkonfiguration
+<small>Pfade tragen niemals einen Slash davor!</small>
+
+```typescript
+// app.routes.ts
+import { RouterConfig } from '@angular/router';
+
+import { DashboardComponent } from './dashboard/index';
+//import { BookDetailsComponent } from './book-details/index'; // TODO
+
+// AppRoutes exportieren! --> import
+export const AppRoutes: RouterConfig = [  
+    { path: '', component: DashboardComponent },
+    //{ path: 'book/:isbn', component: BookDetailsComponent }  // TODO
+];
+```
+
+#### 3.2.2. RouterConfig registrieren
+<small>Pfade tragen niemals einen Slash davor!</small>
+
+```typescript
+// main.ts
+import { provideRouter } from '@angular/router';
+import { /* [...] */,  AppRoutes } from './app/';
+
+bootstrap(AppComponent, [HTTP_PROVIDERS, 
+  provideRouter(AppRoutes)  // !!!!
+]);                          
+```
+
+#### 3.2.3. RouterOutlet einbinden
+<small>ROUTER_DIRECTIVES == RouterOutlet, RouterLink, RouterLinkActive</small>
+
+```typescript
+// app.component.ts
+import { ROUTER_DIRECTIVES } from '@angular/router';
+
+@Component({
+  /* [...] */
+  directives: [ROUTER_DIRECTIVES]
+})
+export class AppComponent { }   
+```
+
+```html                           
+<!-- app.component.ts -->
+<router-outlet></router-outlet>
+```
+
+#### 3.2.4. Detailseite
+
+```ruby|cmd|small
+$ ng g component BookDetails
+```
+
+```typescript|small
+// book-details.component.ts
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
+
+@Component({
+  moduleId: module.id,
+  selector: 'br-book-details',
+  templateUrl: 'book-details.component.html',
+  directives: [ROUTER_DIRECTIVES] // !!!!
+})
+export class BookDetailsComponent implements OnInit {
+  isbn: string;
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.isbn = params['isbn'];
+    });
+  }
+}
+```
+
+#### 3.2.5. Fertig!
+
+```html
+<!-- book.component.html -->
+<a [routerLink]="['book', book?.isbn]">Anzeigen</a>
+``` 
+
+### 3.3 HTTP
 
 Um Zugriffe auf ein Backend realisieren zu können, müssen asynchrone
 Aufrufe auf die Serverschnittstelle (XMLHttpRequest) erfolgen.
